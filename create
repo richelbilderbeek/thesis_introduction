@@ -1,0 +1,10 @@
+#!/bin/bash
+pdflatex introduction.tex --shell-escape
+bibtex introduction.aux
+pdflatex introduction.tex --shell-escape
+pdflatex introduction.tex --shell-escape
+rm introduction.aux
+rm introduction.bbl
+rm introduction.blg
+rm introduction.log
+rm introduction.out
