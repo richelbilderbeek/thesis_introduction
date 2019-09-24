@@ -1,10 +1,11 @@
 #!/bin/bash
-pdflatex introduction.tex --shell-escape
-bibtex introduction.aux
-pdflatex introduction.tex --shell-escape
-pdflatex introduction.tex --shell-escape
-rm introduction.aux
-rm introduction.bbl
-rm introduction.blg
-rm introduction.log
-rm introduction.out
+pdflatex header.tex --shell-escape
+bibtex header.aux
+pdflatex header.tex --shell-escape
+pdflatex header.tex --shell-escape
+rm header.aux
+rm header.bbl
+rm header.blg
+rm header.log
+rm header.out
+mv header.pdf introduction.pdf
