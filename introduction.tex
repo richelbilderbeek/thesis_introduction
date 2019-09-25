@@ -9,6 +9,24 @@
 % BEAST2 nog niet zijn geimplementeerd (en waarom), daarbij in wat meer detail aangevend wat 
 % die opties inhouden (bijv. partities, *BEAST).
 
+Vragen: hoe juist kunnen we fylogenieen construeren?
+
+Diversiteit
+Soortvorming
+Verwantschap
+Fylogenie
+DNA
+Bayesiaanse analyse
+Priors
+
+
+
+
+
+
+
+
+
 %% Start the actual chapter on a new page.
 \newpage
 
@@ -17,24 +35,21 @@
 connecting all of life to one shared common ancestor. It is a process
 that has resulted in the millions of species on Earth nowadays, 
 as well as in the many species that have gone extinct. 
-
 Some speciation events happened earlier than others,
-from hundreds of millions of years ago (so-called 'long-enduring species')
-to recent ones, such as homo sapiens, roughly 350,000 years ago.
+from hundreds of millions of years ago (so-called 'long-enduring species',
+or, informally, 'living fossil') 
+to recent ones, such as \textit{homo sapiens} speciating 
+from \textit{homo erectus} at roughly a third of a million years ago.
 
-
-Species that
-originated from a speciation event remarkably long in time are called
-living fossils.
-
- so we can
-order species by how old they are.
- 
-we 
-This process
-can be investigated on multiple levels, for example at the individuals'
-or at the species level. In this thesis, I focus on the latter.
-
+Within the field of biology, it is a very basic question 
+to ask which species are closest related to
+one another. If you think that's an easy question, try to apply it, 
+for example, on the 8 crocodilian pictures in figure \ref{fig:crocodialians}.
+You may come up with one or more pairs of hypothesized closest-related species,
+but you will probably get stuck on which ancestors of these pairs
+are most closely related. Note that doing the other way around, to use
+morphology to classify species, is tricky: how to decide when the morphology 
+between two specimens is different enough to classify these as two species?
 
 \begin{figure}[H]
   \includegraphics[width=1.0\textwidth]{crocodilians.png}
@@ -73,8 +88,55 @@ or at the species level. In this thesis, I focus on the latter.
     by Hadonos
     is Marked as being in the public domain.
   }
-  \label{fig:phylogeny}
+  \label{fig:crocodialians}
 \end{figure}
+
+The second very basic biological question, is to 
+ask \emph{when} these speciation events took place.
+This question cannot be answered based on morphologies of the present-day
+species alone.
+
+A classical way to answer this second question is using the morphology of fossils.
+This approach can only be used if the species \emph{can} fossilize,
+and those fossils are found in multiple points in time.
+Even if this is the case, there are caveats. Using morphology on
+extinct species is even trickier, as species change their appearance in time.
+Also an imaginary time machine would not help us out:
+we could try to determine the number of species in each timepoint,
+but that would only work if we could confidently define what a
+species is. We cannot, because speciation is usually a gradual process.
+
+A modern approach to answer the second question is using the DNA
+sequences of extant species. DNA is inherited from parent to offspring
+and carries the species' evolutionary histories within it.
+Using DNA, we can find the closest related species by measuring the
+similarity in DNA sequences. When a speciation event took place can
+be apprimated by counting the differences between DNA sequences: the
+more differences, the more independent mutations have occurred, thus
+the longer time it was when the two species speciated.
+
+The way to depict evolutionary relationships, is using a phylogeny.
+
+
+
+The main question of this thesis is: how well can we construct a
+phylogeny from an alignment? What is the error we
+make when we construct a 'tree without birds'?
+
+
+DNA sequences of different species 
+may vary in length, due to insertions and deletions in genetic sequences,
+Usually, we use a procedure (a software tool, for example) to align 
+the sequences, as shown in figure \ref{fig:alignment}:
+
+\begin{figure}[H]
+  \includegraphics[width=0.8\textwidth]{alignment_40.png}
+  \caption{
+    A 40-nucleotide DNA alignment of the six species
+  }
+  \label{fig:alignment}
+\end{figure}
+
 
 
 
@@ -111,28 +173,6 @@ but in the context of this thesis, we do not.
 
 It is impossible to go out in the field and measure a phylogy, 
 as they depict which species lived when \emph{in the past}. 
-Even an imaginary time machine would not help us out:
-we could try to count the number of species in each timepoint,
-but that would only work if we could confidently define what a
-species is. We cannot, because speciation is usually a gradual process.
-
-Without resorting to imaginary machines,
-we -at the present- can work with extant species, 
-as they carry their own evolutionary history with them, 
-in the form of DNA. From those species, 
-we can obtain (part of) their DNA sequences. 
-DNA sequences of different species 
-may vary in length, due to insertions and deletions in genetic sequences,
-Usually, we use a procedure (a software tool, for example) to align 
-the sequences, as shown in figure \ref{fig:alignment}:
-
-\begin{figure}[H]
-  \includegraphics[width=0.8\textwidth]{alignment_40.png}
-  \caption{
-    A 40-nucleotide DNA alignment of the six species
-  }
-  \label{fig:alignment}
-\end{figure}
 
 Figure \ref{fig:alignment} shows an alignment of our six hypothetical species
 that we actually could have found in nature. From this alignment, we
