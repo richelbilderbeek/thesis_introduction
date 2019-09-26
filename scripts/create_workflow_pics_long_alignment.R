@@ -6,7 +6,7 @@ library(ggplot2)
 dna_sequence_length <- 40
 root_folder <- path.expand(
   paste0(
-    "~/GitHubs/thesis/introduction/scripts/",
+    "~/GitHubs/thesis_introduction/scripts/",
     dna_sequence_length
   )
 )
@@ -178,3 +178,32 @@ ggplot2::ggplot(
   xlab("") +
   scale_y_continuous(breaks = seq(0.0, 1.0, by = 0.02)) +
   ggsave(file.path(root_folder, "errors_violin_twin.png"))
+
+
+################################################################################
+# Create ML tree from alignment
+################################################################################
+alignment <- ape::read.FASTA(pir_params$alignment_params$fasta_filename)
+
+dm  <- phangorn::dist.ml(alignment)
+tree_upgma  <- phangorn::upgma(dm)
+tree_nj  <- phangorn::NJ(dm)
+tree_fastme  <- ape::fastme.bal(dm)
+tree_bionj  <- ape::bionj(dm)
+
+grDevices::png(filename = file.path(root_folder, "phylogeny_upgma.png"), width = 800, height = 600)
+ggtree::ggtree(tree_upgma, size = 2) + ggtree::geom_tiplab(size = 16) + ggplot2::theme(plot.margin = unit(c(1,1,1,1), "cm"))
+grDevices::dev.off()
+
+grDevices::png(filename = file.path(root_folder, "phylogeny_nj.png"), width = 800, height = 600)
+ggtree::ggtree(tree_nj, size = 2) + ggtree::geom_tiplab(size = 16) + ggplot2::theme(plot.margin = unit(c(1,1,1,1), "cm"))
+grDevices::dev.off()
+
+grDevices::png(filename = file.path(root_folder, "phylogeny_fastme.png"), width = 800, height = 600)
+ggtree::ggtree(tree_fastme, size = 2) + ggtree::geom_tiplab(size = 16) + ggplot2::theme(plot.margin = unit(c(1,1,1,1), "cm"))
+grDevices::dev.off()
+
+grDevices::png(filename = file.path(root_folder, "phylogeny_bionj.png"), width = 800, height = 600)
+ggtree::ggtree(tree_bionj, size = 2) + ggtree::geom_tiplab(size = 16) + ggplot2::theme(plot.margin = unit(c(1,1,1,1), "cm"))
+grDevices::dev.off()
+
