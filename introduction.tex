@@ -1,23 +1,21 @@
 \chapter{Introduction}
 \label{chapter_introduction}
 
-
-
 % De Intro en Synthese hoeven van mij geen lange verhalen te zijn, maar moeten het werk dat in % de hoofdstukken staat in de wetenschappelijke context plaatsen. Hier moeten dus de praktische % vragen worden gesteld die hebben geleid tot babette, pirouette en rakette /razzo (Intro) en 
 % wat we hier dan mee kunnen (Synthese). Je kunt in de Intro ook wat meer kwijt over hoe BEAST2 % nu eigenlijk werkt, wetenschappelijk gezien, dwz wat zijn species tree priors, wat is de
 %  posterior, wat zijn subtitutiemodellen en klokmodellen. Je kunt ook aangeven welke opties in 
 % BEAST2 nog niet zijn geimplementeerd (en waarom), daarbij in wat meer detail aangevend wat 
 % die opties inhouden (bijv. partities, *BEAST).
 
-Vragen: hoe juist kunnen we fylogenieen construeren?
+% Vragen: hoe juist kunnen we fylogenieen construeren?
 
-Diversiteit
-Soortvorming
-Verwantschap
-Fylogenie
-DNA
-Bayesiaanse analyse
-Priors
+% Diversiteit
+% Soortvorming
+% Verwantschap
+% Fylogenie
+% DNA
+% Bayesiaanse analyse
+% Priors
 
 
 
@@ -55,8 +53,8 @@ shows an example of each.
 \end{figure}
 
 
-Within the field of biology, it is a very basic question 
-to ask which species are closest related to
+A first very basic question within the field of biology,
+is to ask which species are closest related to
 one another. If you think that's an easy question, try to apply it, 
 for example, on the 8 crocodilian pictures in figure \ref{fig:crocodialians}.
 You may come up with one or more pairs of hypothesized closest-related species,
@@ -76,9 +74,12 @@ between two specimens is different enough to classify these as two species?
 The second very basic biological question, is to 
 ask \emph{when} these speciation events took place.
 This question cannot be answered based on morphologies of the present-day
-species alone.
+species alone, because morphology is a complex trait, and the pace at
+which morphology changes in time is unknown or unpredictable.
 
-A classical way to answer this second question is using the morphology of fossils.
+This second question can be answered by
+using a classical approach, 
+by using the morphology of fossils.
 This approach can only be used if the species \emph{can} fossilize,
 and those fossils are found in multiple points in time.
 Even if this is the case, there are caveats. Using morphology on
@@ -88,39 +89,36 @@ we could try to determine the number of species in each timepoint,
 but that would only work if we could confidently define what a
 species is. We cannot, because speciation is usually a gradual process.
 
-A modern approach to answer the second question is using the DNA
-sequences of extant species. DNA is inherited from parent to offspring
-and carries the species' evolutionary histories within it.
-Using DNA, we can find the closest related species by measuring the
-similarity in DNA sequences. When a speciation event took place can
-be apprimated by counting the differences between DNA sequences: the
-more differences, the more independent mutations have occurred, thus
-the longer time it was when the two species speciated.
-
-The way to depict evolutionary relationships, is using a phylogeny.
-
-
-
-The main question of this thesis is: how well can we construct a
-phylogeny from an alignment? What is the error we
-make when we construct a 'tree without birds'?
-
-
-DNA sequences of different species 
-may vary in length, due to insertions and deletions in genetic sequences,
-Usually, we use a procedure (a software tool, for example) to align 
-the sequences, as shown in figure \ref{fig:alignment}:
+This second question can also be answered 
+using a modern approach, 
+by using the DNA sequences of extant species,
+as shown, for example, in figure \ref{fig:alignment}.
+Because DNA is inherited from parent to offspring
+and changes through times, it carries each species' 
+evolutionary histories within it.
+The point in time when a species speciates is
+marked by the two daughter species having seperate mutations
+from that moment on.
+Due to this, we can easily find closest related species 
+by measuring the similarity in DNA sequences.
+If we know how frequent mutations occur, we can already
+do a rough estimation of when the speciation event took place.
+In reality, DNA sequences of different species 
+varies in length, due to insertions and deletions in genetic sequences,
+but in the simulation studies in this thesis, we will ignore this.
 
 \begin{figure}[H]
-  \includegraphics[width=0.8\textwidth]{alignment_40.png}
+  \includegraphics[width=0.8\textwidth]{alignment_40_with_root.png}
   \caption{
-    A 40-nucleotide DNA alignment of the six species
+    A 40-nucleotide DNA alignment of six hypothetical species. The species
+    are named A to and including F. 
+    The four colors denote the four different nucleotides,
+    in which the red color resembles adenine, yellow depicts cytosine, 
+    green is for guanine, and blue resembles thymine. The top
+    row shows the (artificial) root sequence, which is usually unknown. 
   }
   \label{fig:alignment}
 \end{figure}
-
-
-
 
 Speciation at the species level simplifies a species to a horizontal 
 line (also called a 'branch') in a phylogeny, answering
@@ -155,6 +153,13 @@ but in the context of this thesis, we do not.
 
 It is impossible to go out in the field and measure a phylogy, 
 as they depict which species lived when \emph{in the past}. 
+
+
+
+The main question of this thesis is: how well can we construct a
+phylogeny from an alignment? What is the error we
+make when we construct a 'tree without birds'?
+
 
 Figure \ref{fig:alignment} shows an alignment of our six hypothetical species
 that we actually could have found in nature. From this alignment, we
