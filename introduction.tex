@@ -163,16 +163,13 @@ thesis: how well can we construct a
 phylogeny from an alignment?} What is the error we
 make when we construct a 'tree without birds'?
 
-Answering this research question, at first glance, is easy: 
-
-\begin{enumerate}
-	\item simulate a true phylogeny
-	\item simulate an alignment that follows that phylogeny
-	\item construct a phylogeny from that alignment
-  \item measure the difference between the true and constructed phylogeny
-\end{enumerate}
-
-This workflow is depicted in figure \ref{fig:research_workflow}.
+Answering this research question is, at first glance, easy: 
+1. simulate a true phylogeny.
+2. simulate an alignment that follows that phylogeny.
+3. construct a phylogeny from that alignment.
+4. measure the difference between the true and constructed phylogeny.
+This workflow is depicted in figure \ref{fig:research_workflow_single}.
+All steps, however, are more complex than just this.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Figure 1
@@ -221,138 +218,156 @@ This workflow is depicted in figure \ref{fig:research_workflow}.
     3. construct a phylogeny from that alignment.
     4. compare the true and constructed phylogeny.
   }
+  \label{fig:research_workflow_single}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Constructing a phylogeny from an alignment is the step that
+gets most attention in this thesis, as it is also the most complex
+one. Unlike the methods described earlier, 
+we do not construct one single phylogeny, 
+but we construct a distribution of multiple phylogenies.
+Within this distribution of multiple phylogenies, the phylogenies
+that are more likely, will be present more often.
+This method is called Bayesian phylogenetics, in which we use
+a Bayesian approach to create phylogenies based on genetics.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Figure 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+  \centering
+  \resizebox {0.8\columnwidth} {!} {
+    \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=4cm, semithick]   
+    \tikzstyle{every state}=[]
+    \node[state] (A) [rectangle] {
+      \includegraphics[width=0.3\textwidth]{phylogeny.png}
+    };   
+    \node[state] (AL) [above left=-0.25cm and -0.25cm of A, fill=white] {
+      1
+    };   
+    \node[state] (B) [below of = A, rectangle] {
+      \includegraphics[width=0.6\textwidth]{alignment_40_with_root.png}
+    };   
+    \node[state] (BL) [above left=-0.25cm and -0.25cm of B, fill=white] {
+      2
+    };   
+    \node[state] (C) [below of = B, rectangle] {
+      \includegraphics[width=0.3\textwidth]{densitree_40.png}
+    };   
+    \node[state] (CL) [above left=-0.25cm and -0.25cm of C, fill=white] {
+      3
+    };
+    \node[state] (D) [below of = C, rectangle] {
+      \includegraphics[width=0.29\textwidth]{errors_40.png}
+    };   
+    \node[state] (DL) [above left=-0.25cm and -0.25cm of D, fill=white] {
+      4
+    };
+    \path 
+      (A) edge [anchor = south] node {} (B)
+      (B) edge [anchor = south] node {} (C)
+      (A) edge [bend left = 80, anchor = east] node {} (D)
+      (C) edge [anchor = south] node {} (D)
+    ; 
+    \end{tikzpicture}
+  }
+  \caption{
+    Method to answer the research question of this thesis:
+    1. simulate a true phylogeny. 
+    2. simulate an alignment that follows that phylogeny. 
+    3. infer a distribution of phylogenies from that alignment.
+    4. compare the true phylogenies with the inferred phylogenies.
+  }
   \label{fig:research_workflow}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Figure \ref{fig:alignment} shows an alignment of our six hypothetical species
-that we actually could have found in nature. From this alignment, we
-can \emph{infer} a phylogeny, which basically means 'best guess following a 
-rational procedure'. There are multiple ways to infer a phylogeny, for
-example, using maximum likelihood or Bayesian inference. In this thesis, 
-I focus on the latter.
+With Bayesian inference, we need an alignment and our model assumptions to
+infer phylogenies.
+The model assumptions specify what we assume to be true regarding how
+the alignment came to be. For example, we can assume that 1. the true
+phylogeny had a constant speciation and extinction rate, 2. the
+mutation rate is constant and equal for all species and 3. all
+mutations between nucleotides are equally likely. 
 
-With Bayesian inference, we use an alignment and our model assumptions to infer 
-a posterior (more 
-precise: 'a joint posterior distribution of phylogenies and model parameters').
-We do so, by first creating a random phylogeny. Using a likelihood equation,
-we can calculate how likeli it  
-For that, we use a Markov Chain Monte Carlo algorithm, which is n 
+The result of a Bayesian inference, is -to be precise- a posterior
+disribution of jointly-inferred phylogenies and model parameter estimates,
+simply called 'posterior' in this thesis.
+The way such a posterior is generated assures that more likely phylogenies 
+are present more often. 
+This distribution of phylogenies shows the
+(un)certainty of the inference.
+For example, the posterior phylogenies in figure \ref{fig:research_workflow},
+panel 3, show a high degree of uncertainty, as the
+inferred phylogenies vary widely in shape. The posterior correctly
+suggests two clades (ABC and DEF), but does not confidently show
+the two most related taxa (AB and DE). We can already make 
+the rough claim that, would the phylogeny in panel 1 
+in figure \ref{fig:research_workflow} depict
+a true phylogeny, we make a big error in its inference.
 
+To be able to do the phylogentic inference needed for the rest of this
+thesis, I developed an R package to do so, which
+is discussed in chapter 2. Because a Bayesian inference can be set up in
+many ways, the greatest asset of that package is that it gives a
+consistent grammar to express each setup. Additionally, the R package allows
+to run Bayesian inference from the command-line, which is essential for
+the theoretical studies in this thesis.
 
-A posterior contains multiple inferred phylogenies, in which the more likely
-ones are present more often. This distribution of phylogenies shows the
-(un)certainty of the inference. Figure \ref{fig:densitree} shows the
-posterior phylogenies we obtain from our alignment:
+If we can measure the error we make in our inference, 
+we can try and improve the inference. 
+One way to improve it, is to use a better inference model.
+Ideally, we would use the same inference model that gave rise to
+the true phylogeny and alignment, but, alas, 
+we (usually) do not know that model.
+We do not know that model, because we do not know the
+model that nature used: the
+processes that cause speciation are possibly many, and 
+the mechanisms of each are unknown and/or debatable.
+Due to this, we'll have to resort to the many phylogentic models 
+to explain the DNA (RNA, protein, morphological and fossil) data best.
 
-\begin{figure}[H]
-  \includegraphics[width=0.8\textwidth]{densitree_40.png}
-  \caption{
-    The posterior phylogenies of the six species, 
-    from a DNA alignment of 40 nucleotides
-  }
-  \label{fig:densitree}
-\end{figure}
+There are plenty of phylogentic models, ranging from simplistic to
+very complex. The most popular models make it into our
+phylogenetic programs (which, in turn, may make these models even
+more popular), which I will define as 'standard models'.
+When empiricist build a phylogenetic tree from their
+painstakingly acquired DNA alignment, they pick their favorite standard
+model or use an algorithm to select one. The empiricist assumes that the
+standard models are good enough for his/her cause.
 
-Figure \ref{fig:densitree} shows a high degree of uncertainty, as the
-inferred phylogenies vary widely in shape. The inference only
-weakly distinguishes between the ABC and DEF clades. 
+The standard models, however, make some assumptions that will not hold
+in all biological cases. This will increase the error we make in
+our inference. But will that error be profound enough to reject using
+a standard model? 
 
-The inference described so far is unsatisfactory, as we can only draw 
-weak conclusions. We can improve the inference by using a longer DNA sequence 
-or by picking a better inference model. In a simulation study, we can
-easily increase the number of nucleotides, 
-figure \ref{fig:densitree_again} shows the
-posterior phylogenies we obtain from our longer alignment:
+To be able to determine the impact of using a standard phylogentic
+model, when we know the biological process in more complex than it
+assumes, me and Giovanni Laudanno developed an R package 
+to quantify the error we make due to this mismatch, which is described
+in chapter 3.
 
-\begin{figure}[H]
-  \includegraphics[width=0.8\textwidth]{densitree_400.png}
-  \caption{
-    The posterior phylogenies of the six species,
-    from a DNA alignment of 400 nucleotides
-  }
-  \label{fig:densitree_again}
-\end{figure}
+One assumption of all standard models is that speciation event happen
+independently, that is, there are never two speciation events at the same time. 
+There are biological scenario's in which may say
+this is false: when a habitat is split up, 
+due to a geological barrier, this will result in two 
+species communities. The change from one to two communities is likely
+to affect both communities and trigger a speciation event in both
+communities. The inference error of ignoring co-occurring speciation is quantified by
+me and Giovanni Laudanno in chapter 4.
 
-Figure \ref{fig:densitree_again} shows that in this example,
-with more information, we can only show our uncertainty more clearly. 
+Another assumption of all standard models is that speciation event happen
+instantaneously, that is, when there is a speciation event, the two species
+are immediatly recognized as such. We know that speciation takes
+time. 
+The inference error of ignoring this fact is quantified by
+me in chapter 5.
 
-Another way to improve our inference is using a better inference model.
-An inference model embodies our assumptions on how we think evolution
-works, and consists of (1) how nucleotides mutate to others (also
-called 'the site model'), (2) how often mutations occur (also 
-called 'the clock model'), and (3) how speciation works (also 
-called 'the tree prior' or 'the speciation model'). 
-Theory predicts that usually the inference model becomes less important
-if there is more information in an alignment. The example shows here,
-however, shows one of the exceptions.
-
-Ideally, we pick an inference model identical to the actual way things 
-work (or: 'the true model'), be it in nature
-or \textit{in silico}. In practice, the true model that nature uses is unknown.
-Due to this, scientists came up with many models to explain the 
-DNA (RNA, protein, morpholical and fossil) data best.
-
-In a theoretical study, when can simply pick how nature works; that is,
-how it is simulated. Theoretical studies are useful, as these explore
-how well we will ever be able to explain nature. To do so, a 'true' 
-speciation model is picked to generate 'true' phylogenies. 
-From these phylogenies, a 'true' site model and clock model are used to
-simulate a 'true' alignment. From that 'true' alignment, which is the
-data we can gather from nature, we can then see how close our inferred
-phylogenies are to the 'true' phylogeny.
-
-\begin{figure}[H]
-  \centering
-  \subfloat[True tree] {
-    \includegraphics[width=0.3\textwidth]{true_tree.png}
-  }
-  \subfloat[Twin tree] {
-    \includegraphics[width=0.3\textwidth]{twin_tree.png}
-  } 
-  \subfloat[Combined nLTT] {
-    \includegraphics[width=0.4\textwidth]{nltt.png}
-  }
-  \caption{
-    nLTTs
-  }
-  \label{fig:nltts}
-\end{figure}
-
-There are many ways to quantify how similar two phylogenies are. 
-The normalized lineages-through-time (nLTT) statistic (\cite{janzen2015approximate}) simplifies
-a phylogeny to a number of lineages (the number of branches) in time.
-Both number of lineages and time are normalized to have a maximum of one,
-which allows us to compare two trees of any number of tips of any crown age.
-The difference between two phylogenies is simply the surface between the
-two phylogenies' nLTT plots. If two phylogenies are identical in 
-normalized shape, the nLTT difference between them in zero, else the
-value will be higher, with a maximum of one. Because the value of the 
-nLTT increases with increasing difference between the trees, the nLTT statistic
-is a measure of difference, or error. 
-
-In this thesis, I quantify the errors we make in our phylogenetic inference:
-
-\begin{itemize}
-	\item In chapter 2, I show an R package I developed to do Bayesian
-    inference from the command-line
-	\item In chapter 3, me and Giovanni Laudanno describe an R package we 
-    developed to quantify the error we make in phylogenetic inference
-	\item In chapter 4, Giovanni Laudanno and I quantify the error we make 
-    in phylogenetic trees when speciation can co-occur
-	\item In chapter 5, I quantify the error we make 
-    in phylogenetic trees when speciation takes time
-	\item In chapter 6, I show which conclusions can be drawn from these chapters
-\end{itemize}
+In chapter 6, I show which conclusions can be drawn from these chapters
 
 \references{dissertation}
-
-
-
-Figure \ref{fig:phylogeny} shows an example phylogeny:
-
-
-
 
 \subsection{Photo attribution}
 
