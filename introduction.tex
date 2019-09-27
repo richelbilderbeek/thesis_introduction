@@ -121,70 +121,109 @@ but in the simulation studies in this thesis, we will ignore this.
 \end{figure}
 
 Using the DNA sequences of extant species to answer our biological questions,
-however, is a complex topic. There are many ways, like bootstrapping, 
-jack-knifing, parsimony, maximum likelihood, UPGMA and more.
+however, is a complex topic. For starters, there are multiple 
+ways to do so, like bootstrapping, 
+jack-knifing, parsimony, maximum likelihood and more.
+A conveniently simple approach is to use UPGMA, which answer our biological
+questions, in the form of a phylogeny.
+
 
 \begin{figure}[H]
   \includegraphics[width=0.4\textwidth]{phylogeny_40_upgma.png}
   \caption{
-    Phylogeny created using UPGMA
+    Phylogeny created from the alignment in figure \ref{fig:alignment} 
+    using UPGMA. 
+    This method is irrelevant in the context of this thesis.
   }
   \label{fig:phylogeny_upgma}
 \end{figure}
 
-The precise methodology to do so, is, however, more complex. There
-are even multiple ways to a
-
-, to get from a DNA sequence alignment, to a
-dated overview of evolutionary relationships, however, is complex.
-
-
-, is, however
-more complex than this.
-
-
-
-Starting 
-Speciation at the species level simplifies a species to a horizontal 
-line (also called a 'branch') in a phylogeny, answering
-basic questions like 'Which species lived when?', 'When did a speciation 
-event take place?' (depicted by the vertical lines)
-and 'Who is the ancestor of which species?'. 
-Figure \ref{fig:phylogeny} shows an example phylogeny:
-
-\begin{figure}[H]
-  \includegraphics[width=0.4\textwidth]{phylogeny.png}
-  \caption{
-    A phylogeny with six species
-  }
-  \label{fig:phylogeny}
-\end{figure}
-
-Figure \ref{fig:phylogeny} shows a phylogeny (also called 'phylogenetic tree', 
-or simply 'tree') with six hypothetical species and their evolutionary 
+Figure \ref{fig:phylogeny_upgma} shows a phylogeny (also called 'phylogenetic tree', 
+or simply 'tree'), created from the alignment 
+in figure \ref{fig:alignment} using one such methodology.
+It shows the six hypothetical species and their evolutionary 
 relationships. Going from left to right, we travel through time from 
 the past to the present. 
 The leftmost vertical line indicates the first speciation event, 
 which gave rise to the first two ancestral species. 
 This first split in the tree is called the crown,
 the moment in time this occurred is called the crown age.
-
-Each of these ancestral species gives rise to its own evolutionary history,
-resulting in a tree with two clades: the ABC and the DEF clades.
 Sure, we could equally well have started the phylogeny 
 with one ancestral species at the utmost left,
 going further back in time from the crown age to, what is called, the stem age,
 but in the context of this thesis, we do not.
 
-It is impossible to go out in the field and measure a phylogy, 
-as they depict which species lived when \emph{in the past}. 
-
-
-
-The main question of this thesis is: how well can we construct a
-phylogeny from an alignment? What is the error we
+The problem with phylogenies is, 
+that it is impossible to go out in the field and measure one, 
+as they depict which species lived when \emph{in the past}.
+Instead, we \emph{construct} phylogenies. For example,
+the phylogeny in figure \ref{fig:phylogeny_upgma}, how well
+does match the true phylogeny? \textbf{That question, is the main question of this 
+thesis: how well can we construct a
+phylogeny from an alignment?} What is the error we
 make when we construct a 'tree without birds'?
 
+Answering this research question, at first glance, is easy: 
+
+\begin{enumerate}
+	\item simulate a true phylogeny
+	\item simulate an alignment that follows that phylogeny
+	\item construct a phylogeny from that alignment
+  \item measure the difference between the true and constructed phylogeny
+\end{enumerate}
+
+This workflow is depicted in figure \ref{fig:research_workflow}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Figure 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+  \centering
+  \resizebox {0.8\columnwidth} {!} {
+    \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=4cm, semithick]   
+    \tikzstyle{every state}=[]
+    \node[state] (A) [rectangle] {
+      \includegraphics[width=0.3\textwidth]{phylogeny.png}
+    };   
+    \node[state] (AL) [above left=-0.25cm and -0.25cm of A, fill=white] {
+      1
+    };   
+    \node[state] (B) [below of = A, rectangle] {
+      \includegraphics[width=0.6\textwidth]{alignment_40_with_root.png}
+    };   
+    \node[state] (BL) [above left=-0.25cm and -0.25cm of B, fill=white] {
+      2
+    };   
+    \node[state] (C) [below of = B, rectangle] {
+      \includegraphics[width=0.3\textwidth]{phylogeny_40_upgma.png}
+    };   
+    \node[state] (CL) [above left=-0.25cm and -0.25cm of C, fill=white] {
+      3
+    };
+    \node[state] (D) [below of = C, rectangle] {
+      \includegraphics[width=0.4\textwidth]{nltt_40_true_and_upgma.png}
+    };   
+    \node[state] (DL) [above left=-0.25cm and -0.25cm of D, fill=white] {
+      4
+    };
+    \path 
+      (A) edge [anchor = south] node {} (B)
+      (B) edge [anchor = south] node {} (C)
+      (A) edge [bend left = 80, anchor = east] node {} (D)
+      (C) edge [anchor = south] node {} (D)
+    ; 
+    \end{tikzpicture}
+  }
+  \caption{
+    (Simplified) method to answer the research question of this thesis:
+    1. simulate a true phylogeny. 
+    2. simulate an alignment that follows that phylogeny. 
+    3. construct a phylogeny from that alignment.
+    4. compare the true and constructed phylogeny.
+  }
+  \label{fig:research_workflow}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Figure \ref{fig:alignment} shows an alignment of our six hypothetical species
 that we actually could have found in nature. From this alignment, we
@@ -307,6 +346,12 @@ In this thesis, I quantify the errors we make in our phylogenetic inference:
 \end{itemize}
 
 \references{dissertation}
+
+
+
+Figure \ref{fig:phylogeny} shows an example phylogeny:
+
+
 
 
 \subsection{Photo attribution}

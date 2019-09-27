@@ -53,13 +53,13 @@ errors <- pir_run(phylogeny = phylogeny, pir_params = pir_params)
 
 grDevices::png(filename = file.path(root_folder, "phylogeny.png"), width = 800, height = 600)
 # ape::plot.phylo(phylogeny, cex = 2.0, edge.width = 2.0)
-ggtree::ggtree(phylogeny, size = 2) + ggtree::geom_tiplab(size = 16) + ggplot2::theme(plot.margin = unit(c(1,1,1,1), "cm"))
+ggtree::ggtree(phylogeny, size = 2, col = "red") + ggtree::geom_tiplab(size = 16) + ggplot2::theme(plot.margin = unit(c(1,1,1,1), "cm"))
 grDevices::dev.off()
 
 
 grDevices::png(filename = file.path(root_folder, "phylogeny_twin.png"), width = 800, height = 600)
 # ape::plot.phylo(ape::read.tree(pir_params$twinning_params$twin_tree_filename), cex = 2.0, edge.width = 2.0)
-ggtree::ggtree(ape::read.tree(pir_params$twinning_params$twin_tree_filename), size = 2) + ggtree::geom_tiplab(size = 16) + ggplot2::theme(plot.margin = unit(c(1,1,1,1), "cm"))
+ggtree::ggtree(ape::read.tree(pir_params$twinning_params$twin_tree_filename), size = 2, col = "orange") + ggtree::geom_tiplab(size = 16) + ggplot2::theme(plot.margin = unit(c(1,1,1,1), "cm"))
 grDevices::dev.off()
 
 
@@ -192,7 +192,7 @@ tree_fastme  <- ape::fastme.bal(dm)
 tree_bionj  <- ape::bionj(dm)
 
 grDevices::png(filename = file.path(root_folder, "phylogeny_upgma.png"), width = 800, height = 600)
-ggtree::ggtree(tree_upgma, size = 2) + ggtree::geom_tiplab(size = 16) + ggplot2::theme(plot.margin = unit(c(1,1,1,1), "cm"))
+ggtree::ggtree(tree_upgma, size = 2, col = "blue") + ggtree::geom_tiplab(size = 16) + ggplot2::theme(plot.margin = unit(c(1,1,1,1), "cm"))
 grDevices::dev.off()
 
 grDevices::png(filename = file.path(root_folder, "phylogeny_nj.png"), width = 800, height = 600)
@@ -205,5 +205,18 @@ grDevices::dev.off()
 
 grDevices::png(filename = file.path(root_folder, "phylogeny_bionj.png"), width = 800, height = 600)
 ggtree::ggtree(tree_bionj, size = 2) + ggtree::geom_tiplab(size = 16) + ggplot2::theme(plot.margin = unit(c(1,1,1,1), "cm"))
+grDevices::dev.off()
+
+
+
+
+
+################################################################################
+# nLTTs
+################################################################################
+grDevices::png(filename = file.path(root_folder, "nltt_true_and_upgma.png"), width = 800, height = 600)
+par(mar = c(5.1, 4.1, 4.1, 2.1) + 5)
+nLTT::nltts_plot(c(phylogeny), col = "red", lwd = 7, main = "nLTTs", cex.lab = 2.5, cex.main = 4, cex.axis = 2.5)
+nLTT::nltts_plot(c(tree_upgma), replot = TRUE, col = "blue", lwd = 7)
 grDevices::dev.off()
 
