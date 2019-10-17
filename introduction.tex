@@ -7,8 +7,9 @@
 \dropcap{S}{peciation} is the process that creates new species,
 connecting all of life to one shared common ancestor. It is a process
 that has resulted in the millions of species on Earth nowadays, 
-as well as in the many species that have gone extinct. 
-Some speciation events happened earlier than others,
+as well as in the many species that have gone extinct.
+Some speciation events that gave rise to extant species, 
+happened earlier than others,
 from hundreds of millions of years ago (so-called 'long-enduring species',
 or, informally, 'living fossil') 
 to more recent ones. See figure \ref{fig:long_enduring_and_young_species} 
@@ -29,7 +30,9 @@ shows an example of each.
 
 A first very basic question within the field of biology,
 is to ask which species are closest related to
-one another. If you think that's an easy question, try to apply it, 
+one another. 
+[MAKE STRONGER CASE HERE]
+If you think that's an easy question, try to apply it, 
 for example, on the 8 crocodilian pictures in figure \ref{fig:crocodialians}.
 You may come up with one or more pairs of hypothesized closest-related species,
 but you will probably get stuck on which ancestors of these pairs
@@ -98,7 +101,7 @@ Using the DNA sequences of extant species to answer our biological questions,
 however, is a complex topic. For starters, there are multiple 
 ways to do so, like bootstrapping, 
 jack-knifing, parsimony, maximum likelihood and more.
-A conveniently simple approach is to use UPGMA, which answer our biological
+A conveniently simple approach is to use UPGMA [DEFINE AND EXPLAIN], which answer our biological
 questions, in the form of a phylogeny.
 
 
@@ -112,8 +115,8 @@ questions, in the form of a phylogeny.
   \label{fig:phylogeny_upgma}
 \end{figure}
 
-Figure \ref{fig:phylogeny_upgma} shows a phylogeny (also called 'phylogenetic tree', 
-or simply 'tree'), created from the alignment 
+Figure \ref{fig:phylogeny_upgma} shows a phylogeny, [ASSUME MORE KNOWLEDGE]
+created from the alignment 
 in figure \ref{fig:alignment} using one such methodology.
 It shows the six hypothetical species and their evolutionary 
 relationships. Going from left to right, we travel through time from 
@@ -121,11 +124,7 @@ the past to the present.
 The leftmost vertical line indicates the first speciation event, 
 which gave rise to the first two ancestral species. 
 This first split in the tree is called the crown,
-the moment in time this occurred is called the crown age.
-Sure, we could equally well have started the phylogeny 
-with one ancestral species at the utmost left,
-going further back in time from the crown age to, what is called, the stem age,
-but in the context of this thesis, we do not.
+the moment in time this occurred is called the crown age. [CHANGE TONE TO SCIENTIFIC JOURNAL]
 
 The problem with phylogenies is, 
 that it is impossible to go out in the field and measure one, 
@@ -135,7 +134,7 @@ the phylogeny in figure \ref{fig:phylogeny_upgma}, how well
 does match the true phylogeny? \textbf{That question, is the main question of this 
 thesis: how well can we construct a
 phylogeny from an alignment?} What is the error we
-make when we construct a 'tree without birds'?
+make when we construct a phylogeny?
 
 Answering this research question is, at first glance, easy: 
 1. simulate a true phylogeny.
@@ -265,6 +264,7 @@ phylogeny had a constant speciation and extinction rate, 2. the
 mutation rate is constant and equal for all species and 3. all
 mutations between nucleotides are equally likely. 
 
+[ALP: This is the point at the heart of these thesis, right? In order to infer phylogenetic topology and divergence times we need to assume a certain model for speciation and extinction. You need to build the case for why the current model used may not be appropriate and why more complex models may be required. You really need to delve into the 1) literature on speciation, to discus the biological/geographical/environmental mechanisms underlying speciation and our latest understanding of how speciation works 2) literature on modelling diversification, highlighting how there have been major advances in modelling different modes and tempo of speciation when estimating diversification but not (surprisingly) when infering trees. You need to highlight the logical inconsistency of this and why it could be severely problematic - if we assume certain speciation modes when infering trees does this bias what speciation mode we would infer from that tree??  ]
 The result of a Bayesian inference, is -to be precise- a posterior
 disribution of jointly-inferred phylogenies and model parameter estimates,
 simply called 'posterior' in this thesis.
@@ -299,6 +299,7 @@ We do not know that model, because we do not know the
 model that nature used: the
 processes that cause speciation are possibly many, and 
 the mechanisms of each are unknown and/or debatable.
+[ALP: but you need to go into this in detail to build the case for why the existing models are unlikely to be sufficient or at least why it is important to explore potentially more realistic models]
 Due to this, we'll have to resort to the many phylogentic models 
 to explain the DNA (RNA, protein, morphological and fossil) data best.
 
@@ -312,7 +313,8 @@ model or use an algorithm to select one. The empiricist assumes that the
 standard models are good enough for his/her cause.
 
 The standard models, however, make some assumptions that will not hold
-in all biological cases. This will increase the error we make in
+in all biological cases. 
+[ALP: expand on this to explain what the standard model is and what assumptions they make] This will increase the error we make in
 our inference. But will that error be profound enough to reject using
 a standard model? 
 
@@ -322,6 +324,7 @@ assumes, me and Giovanni Laudanno developed an R package
 to quantify the error we make due to this mismatch, which is described
 in chapter 3.
 
+[ALP: Great! this is what i was looking for. You need much more of this kind of stuff. There are other scenarios you might want to discuss e.g. barriers that result in multiple species being isolated simultaneously like when habitat layers move up and down mountains during ice ages species get isolated on the tops or in the valleys.]
 One assumption of all standard models is that speciation event happen
 independently, that is, there are never two speciation events at the same time. 
 There are biological scenario's in which may say
@@ -332,6 +335,7 @@ to affect both communities and trigger a speciation event in both
 communities. The inference error of ignoring co-occurring speciation is quantified by
 me and Giovanni Laudanno in chapter 4.
 
+[ALP: you need to provide a lot more information and discussion here - why does speciation take time? Does it always take time or can it be instantaneous? Are there examples of clades that you can use to illustrate your arguments? You need to delve  into the theory and empirical evidence of speciation here to make a compelling case for why a protracted model that at least allows speciation to occur gradually is needed. Again, highlight how this has been implemented to infer speciation dynamics from tree but oddly the models used to infer the tree in the first place ignore this. ]
 Another assumption of all standard models is that speciation event happen
 instantaneously, that is, when there is a speciation event, the two species
 are immediatly recognized as such. We know that speciation takes
