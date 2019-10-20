@@ -92,23 +92,18 @@ descendants) likelier to speciate, and if yes, what causes that?
 
 The second very basic biological question, is to 
 ask \emph{when} these speciation events took place.
-[
-  ALP:
-  again, while i agree that it is a basic question, 
-  you need to make the case why it is an important and relevant question 
-  that is worth devoting an entire PhD to. 
-  What depends on being able to ascertain 
-  evolutionary relationships and divergence times? 
-  What interesting questions about biodiversity require knowing these things?
-  I would add a paragraph describing the enormous leaps 
-  forward that phylogenetic research has taken and highlight 
-  the breadth of research questions that the phylogenetic approach 
-  has enabled us to address, from comparative analyses 
-  of trait evolution and behaviour, to understanding 
-  the evolution and distribution of species diversity. 
-  You can then say that all of this depends on an accurate reconstruction 
-  of relationships and timing of divergence.
-]
+Also this question goes deeper than just 
+adding a timescale to phylogenies.
+Knowing when a speciation event took place,
+opens up many clues in understanding speciation, as,
+for example, that moment in time may be linked to a large geographical change.
+Additionally, we can (try to) deduce the species community through time.
+Not only does speciation influence species communities (by adding
+new members), a species community might influence the process of speciation
+in return. An open question is whether species communities get
+saturated to a maximum number of species, or that new community members
+give rise to new niches for more new members.
+
 This question cannot be answered based on morphologies of the present-day
 species alone, because morphology is a complex trait, and the pace at
 which morphology changes in time is unknown or unpredictable.
@@ -156,33 +151,31 @@ but in the simulation studies in this thesis, we will ignore this.
   \label{fig:alignment}
 \end{figure}
 
-Using the DNA sequences of extant species to answer our biological questions,
-however, is a complex topic. For starters, there are multiple 
-ways to do so, like bootstrapping, 
-jack-knifing, parsimony, maximum likelihood and more.
-A conveniently simple approach is to use UPGMA 
-[
-  ALP:
-  needs to be defined and explained
-]
-, which answer our biological
-questions, in the form of a phylogeny.
-
+The field of phylogenetics is devoted to
+use heritable information of (usually) extant species to
+infer a dated phylogeny. Phylogenetics is a field that has
+made enourmous leaps thanks to the increase of computational power.
+Phylogenetics allows us to follow the evolution and distribution
+of traits and behavior in time, and -due to this-
+understand the evolution and distribution of species diversity.
+All of this depends on an accurate reconstruction the species' dated phylogenies.
 
 \begin{figure}[H]
   \includegraphics[width=0.4\textwidth]{phylogeny_40_upgma.png}
   \caption{
     Phylogeny created from the alignment in figure \ref{fig:alignment} 
-    using UPGMA. 
-    This method is irrelevant in the context of this thesis.
+    using a quick-and-dirty methodology.
   }
   \label{fig:phylogeny_upgma}
 \end{figure}
 
+There is a rich toolset to infer a phylogeny from heritable 
+information (which, in this thesis, always consists of a DNA alignment).
 Figure \ref{fig:phylogeny_upgma} shows a phylogeny inferred
 from the alignment 
-in figure \ref{fig:alignment} using one such methodology.
-It shows the six hypothetical species and their evolutionary 
+in figure \ref{fig:alignment} using a quick-and-dirty methodology (of
+which the name is irrelevant).
+The phylogeny shows the six hypothetical species and their evolutionary 
 relationships. Going from left to right, we travel through time from 
 the past to the present. 
 The leftmost vertical line indicates the first speciation event, 
@@ -326,11 +319,29 @@ a Bayesian approach to create phylogenies based on genetics.
 
 With Bayesian inference, we need an alignment and our model assumptions to
 infer phylogenies.
+Different model assumptions will result in different trees.
+There are many assumptions to choose from, regarding
+the mutation of nucleotides in the DNA alignment, the
+DNA mutation rate of species and the speciation model.
 The model assumptions specify what we assume to be true regarding how
-the alignment came to be. For example, we can assume that 1. the true
-phylogeny had a constant speciation and extinction rate, 2. the
-mutation rate is constant and equal for all species and 3. all
-mutations between nucleotides are equally likely. 
+the alignment came to be. 
+
+For example, we can assume that:
+
+\begin{enumerate}[label=\arabic*)]\itemsep2pt
+  \item the true phylogeny had a constant speciation and extinction rate 
+  \item the mutation rate is constant and equal for all species
+  \item all mutations between nucleotides are equally likely
+\end{enumerate}
+
+This set of model assumptions is simple and -party due to that-
+commonly used.
+
+See figure \ref{fig:phylograms_for_different_tree_priors}
+to see that for an alignment obtained from primates, it matters
+little if extinction is assumed to be absent or constant.
+
+
 
 [  
   ALP: This is the point at the heart of these thesis, right? 
@@ -350,6 +361,22 @@ mutations between nucleotides are equally likely.
   modes when infering trees does this bias what speciation mode 
   we would infer from that tree??  
 ]
+
+\begin{figure}[H]
+  \includegraphics[width=0.5\textwidth]{primates_yule.png}
+  \includegraphics[width=0.5\textwidth]{primates_bd.png}
+  \caption{
+    Phylograms created from the same alignment, using three different
+    speciation models: left: Yule, right: Birth-Death. Both
+    timescales are normalized to one. Note that for both speciation
+    models, the genus \textit{Pan} and the species \textit{Homo sapiens}
+    separated at approximately the same time.
+  }
+  \label{fig:phylograms_for_different_tree_priors}
+\end{figure}
+
+
+
 The result of a Bayesian inference, is -to be precise- a posterior
 disribution of jointly-inferred phylogenies and model parameter estimates,
 simply called 'posterior' in this thesis.
@@ -425,6 +452,7 @@ in chapter 3.
   like when habitat layers move up and down mountains 
   during ice ages species get isolated on the tops or in the valleys.
 ]
+
 One assumption of all standard models is that speciation event happen
 independently, that is, there are never two speciation events at the same time. 
 There are biological scenario's in which may say
