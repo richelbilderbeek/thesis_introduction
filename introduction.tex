@@ -3,35 +3,25 @@
 %% Start the actual chapter on a new page.
 \newpage
 
-[
-  @Rampal:
-
-  I'd enjoy guidance in the tone of this chapter:
-  In earlier feedback, Alex noted that my tone was a bit too informal
-  and I did implement this.
-  But while writing this chapter, I feel my readers will be mostly 
-  laymen (including kids), so I employ a more popular science style.
-  Please point out where the tone should be changed to a more formal style
-]
-
-
-[
-  ALP:
+\alex{
   I feel the two aspects of the introduction that need the most work are 
   1) better explaining why it is so important 
      that we can accurately reconstruct phylogenetic relationships 
   2) better explaining why current models may not be adequate 
      and what new models need to be developed. Just saying that current 
-     models assume ‘x’ but this may not be appropriate if the real process 
-     is ‘y’ but we don’t know ‘y’, is not enough. Instead, you really need to 
+     models assume 'x' but this may not be appropriate if the real process 
+     is 'y' but we don't know 'y', is not enough. Instead, you really need to 
      delve into the speciation literature, discussing the theory and 
      empirical evidence for how the speciation process occurs, 
      illustrating your discussion with real world examples. 
-     Have you read ‘Speciation' by Coyne and Orr and also 'Speciation 
+     Have you read 'Speciation' by Coyne and Orr and also 'Speciation 
      in Birds' by Trevor Price? These two books are excellent.
-]
+}
 
-\noindent 
+\noindent
+
+\section{Speciation}
+ 
 \dropcap{S}{peciation} is the process that creates new species,
 connecting all of life to one shared common ancestor. It is a process
 that has resulted in the millions of species on Earth nowadays, 
@@ -56,13 +46,21 @@ shows an example of each.
   \label{fig:long_enduring_and_young_species}
 \end{figure}
 
+\section{Relatedness}
+
+\subsection{Relatedness: introduction}
+
 A first very basic question within the field of biology,
 is to ask which species are closest related to
-one another. 
+one another. Take, for example, the 8 crocodilian species 
+depicted in figure \ref{fig:crocodialians}.
 
-[RJCB: Keep this paragraph, of too popular science-y?]
-If you think that's an easy question, try to apply it, 
-for example, on the 8 crocodilian pictures in figure \ref{fig:crocodialians}.
+\subsection{Relatedness: answer with morphology}
+
+\subsection{Relatedness: answer with DNA}
+
+\subsection{Relatedness: difference between morphology versus DNA}
+
 You may come up with one or more pairs of hypothesized closest-related species,
 but you will probably get stuck on which ancestors of these pairs
 are most closely related. Note that doing the other way around, to use
@@ -77,6 +75,8 @@ between two specimens is different enough to classify these as two species?
   \label{fig:crocodialians}
 \end{figure}
 
+\subsection{Relatedness: biological relevance}
+
 Knowing which species are closest related to
 one another goes deeper than just
 being able to do taxanomic bookkeeping. Each
@@ -90,8 +90,19 @@ for example, by the ancestral species evolves from a generalist
 species into to specialist species. Also, are some species (and their
 descendants) likelier to speciate, and if yes, what causes that?
 
+\subsection{Relatedness: tools}
+
+\richel{Describe early computational tools to create cladograms here}
+
+\section{Time of speciation}
+
+\subsection{Time of speciation: introduction}
+
 The second very basic biological question, is to 
 ask \emph{when} these speciation events took place.
+
+\subsection{Time of speciation: biological relevance}
+
 Also this question goes deeper than just 
 adding a timescale to phylogenies.
 Knowing when a speciation event took place,
@@ -104,9 +115,13 @@ in return. An open question is whether species communities get
 saturated to a maximum number of species, or that new community members
 give rise to new niches for more new members.
 
+\subsection{Time of speciation: answer with morphology fails}
+
 This question cannot be answered based on morphologies of the present-day
 species alone, because morphology is a complex trait, and the pace at
 which morphology changes in time is unknown or unpredictable.
+
+\subsection{Time of speciation: answer with fossils is OK}
 
 This second question can be answered by
 using a classical approach, 
@@ -119,6 +134,8 @@ Also an imaginary time machine would not help us out:
 we could try to determine the number of species in each timepoint,
 but that would only work if we could confidently define what a
 species is. We cannot, because speciation is usually a gradual process.
+
+\subsection{Time of speciation: answer with DNA is awesome}
 
 This second question can also be answered 
 using a modern approach, 
@@ -151,6 +168,8 @@ but in the simulation studies in this thesis, we will ignore this.
   \label{fig:alignment}
 \end{figure}
 
+\section{phylogenetics}
+
 The field of phylogenetics is devoted to
 use heritable information of (usually) extant species to
 infer a dated phylogeny. Phylogenetics is a field that has
@@ -169,6 +188,8 @@ All of this depends on an accurate reconstruction the species' dated phylogenies
   \label{fig:phylogeny_upgma}
 \end{figure}
 
+\subsection{Non-Bayesian Phylogenetics: simple example}
+
 There is a rich toolset to infer a phylogeny from heritable 
 information (which, in this thesis, always consists of a DNA alignment).
 Figure \ref{fig:phylogeny_upgma} shows a phylogeny inferred
@@ -183,6 +204,8 @@ which gave rise to the first two ancestral species.
 This first split in the tree is called the crown,
 the moment in time this occurred is called the crown age.
 
+\subsection{Non-Bayesian Phylogenetics: pipeline}
+
 The problem with phylogenies is, 
 that it is impossible to go out in the field and measure one, 
 as they depict which species lived when \emph{in the past}.
@@ -192,6 +215,8 @@ does match the true phylogeny? \textbf{That question, is the main question of th
 thesis: how well can we construct a
 phylogeny from an alignment?} What is the error we
 make when we construct a phylogeny?
+
+\subsection{Non-Bayesian Phylogenetics: pipeline simple example}
 
 Answering this research question is, at first glance, easy: 
 
@@ -251,9 +276,22 @@ All steps, however, are more complex than just this.
     2. simulate an alignment that follows that phylogeny. 
     3. construct a phylogeny from that alignment.
     4. compare the true and constructed phylogeny.
+    Note the big difference between the true and constructed phylogeny
   }
   \label{fig:research_workflow_single}
 \end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Bayesian phylogenetics}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Bayesian phylogenetics: introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Constructing a phylogeny from an alignment is the step that
@@ -265,6 +303,63 @@ Within this distribution of multiple phylogenies, the phylogenies
 that are more likely, will be present more often.
 This method is called Bayesian phylogenetics, in which we use
 a Bayesian approach to create phylogenies based on genetics.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{BEAST2}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{babette}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+To be able to do the phylogentic inference needed for the rest of this
+thesis, I developed an R package to do so, which
+is discussed in chapter 2. Because a Bayesian inference can be set up in
+many ways, the greatest asset of that package is that it gives a
+consistent grammar to express each setup. Additionally, the R package allows
+to run Bayesian inference from the command-line, which is essential for
+the theoretical studies in this thesis.
+
+If we can measure the error we make in our inference, 
+we can try and improve the inference. 
+One way to improve it, is to use a better inference model.
+Ideally, we would use the same inference model that gave rise to
+the true phylogeny and alignment, but, alas, 
+we (usually) do not know that model.
+We do not know that model, because we do not know the
+model that nature used: the
+processes that cause speciation are possibly many, and 
+the mechanisms of each are unknown and/or debatable.
+
+\alex{
+  ALP: but you need to go into this in detail to build the case for 
+  why the existing models are unlikely to be sufficient or at least 
+  why it is important to explore potentially more realistic models
+}
+
+Due to this, we'll have to resort to the many phylogentic models 
+to explain the DNA (RNA, protein, morphological and fossil) data best.
+
+There are plenty of phylogentic models, ranging from simplistic to
+very complex. The most popular models make it into our
+phylogenetic programs (which, in turn, may make these models even
+more popular), which I will define as 'standard models'.
+When empiricist build a phylogenetic tree from their
+painstakingly acquired DNA alignment, they pick their favorite standard
+model or use an algorithm to select one. The empiricist assumes that the
+standard models are good enough for his/her cause.
+
+The standard models, however, make some assumptions that will not hold
+in all biological cases.
+
+\alex{
+  ALP: expand on this to explain what the standard model is 
+  and what assumptions they make
+}
+
+This will increase the error we make in
+our inference. But will that error be profound enough to reject using
+a standard model? 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Figure 1
@@ -317,6 +412,10 @@ a Bayesian approach to create phylogenies based on genetics.
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Bayesian phylogenetics: standard assumptions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 With Bayesian inference, we need an alignment and our model assumptions to
 infer phylogenies.
 Different model assumptions will result in different trees.
@@ -335,16 +434,12 @@ For example, we can assume that:
 \end{enumerate}
 
 This set of model assumptions is simple and -party due to that-
-commonly used.
-
-See figure \ref{fig:phylograms_for_different_tree_priors}
-to see that for an alignment obtained from primates, it matters
+commonly used. Figure \ref{fig:phylograms_for_different_tree_priors}
+shows an example, that, for an alignment obtained from primates, it matters
 little if extinction is assumed to be absent or constant.
 
-
-
-[  
-  ALP: This is the point at the heart of these thesis, right? 
+\alex{
+  This is the point at the heart of these thesis, right? 
   In order to infer phylogenetic topology and divergence times 
   we need to assume a certain model for speciation and extinction. 
   You need to build the case for why the current model used 
@@ -360,7 +455,13 @@ little if extinction is assumed to be absent or constant.
   and why it could be severely problematic - if we assume certain speciation 
   modes when infering trees does this bias what speciation mode 
   we would infer from that tree??  
-]
+}
+
+\richel{
+  Although I think this feedback is excellent, I will prioritize handing
+  in a thesis chapter approximately on time, therefore ignoring most of this
+  feedback for now
+}
 
 \begin{figure}[H]
   \includegraphics[width=0.5\textwidth]{primates_yule.png}
@@ -374,8 +475,6 @@ little if extinction is assumed to be absent or constant.
   }
   \label{fig:phylograms_for_different_tree_priors}
 \end{figure}
-
-
 
 The result of a Bayesian inference, is -to be precise- a posterior
 disribution of jointly-inferred phylogenies and model parameter estimates,
@@ -393,65 +492,24 @@ the rough claim that, would the phylogeny in panel 1
 in figure \ref{fig:research_workflow} depict
 a true phylogeny, we make a big error in its inference.
 
-To be able to do the phylogentic inference needed for the rest of this
-thesis, I developed an R package to do so, which
-is discussed in chapter 2. Because a Bayesian inference can be set up in
-many ways, the greatest asset of that package is that it gives a
-consistent grammar to express each setup. Additionally, the R package allows
-to run Bayesian inference from the command-line, which is essential for
-the theoretical studies in this thesis.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Bayesian phylogenetics: assumptions mismatch}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-If we can measure the error we make in our inference, 
-we can try and improve the inference. 
-One way to improve it, is to use a better inference model.
-Ideally, we would use the same inference model that gave rise to
-the true phylogeny and alignment, but, alas, 
-we (usually) do not know that model.
-We do not know that model, because we do not know the
-model that nature used: the
-processes that cause speciation are possibly many, and 
-the mechanisms of each are unknown and/or debatable.
-[
-  ALP: but you need to go into this in detail to build the case for 
-  why the existing models are unlikely to be sufficient or at least 
-  why it is important to explore potentially more realistic models
-]
-Due to this, we'll have to resort to the many phylogentic models 
-to explain the DNA (RNA, protein, morphological and fossil) data best.
+There are, however, plenty of biological cases where the assumption
+mismatch: 
 
-There are plenty of phylogentic models, ranging from simplistic to
-very complex. The most popular models make it into our
-phylogenetic programs (which, in turn, may make these models even
-more popular), which I will define as 'standard models'.
-When empiricist build a phylogenetic tree from their
-painstakingly acquired DNA alignment, they pick their favorite standard
-model or use an algorithm to select one. The empiricist assumes that the
-standard models are good enough for his/her cause.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Bayesian phylogenetics: assumptions mismatch: MBD}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The standard models, however, make some assumptions that will not hold
-in all biological cases. 
-[
-  ALP: expand on this to explain what the standard model is 
-  and what assumptions they make
-] 
-This will increase the error we make in
-our inference. But will that error be profound enough to reject using
-a standard model? 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bayesian phylogenetics
+%   assumptions mismatch
+\subsubsection{MBD}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-To be able to determine the impact of using a standard phylogentic
-model, when we know the biological process in more complex than it
-assumes, me and Giovanni Laudanno developed an R package 
-to quantify the error we make due to this mismatch, which is described
-in chapter 3.
-
-[
-  ALP: Great! this is what i was looking for. 
-  You need much more of this kind of stuff. 
-  There are other scenarios you might want to discuss e.g. 
-  barriers that result in multiple species being isolated simultaneously 
-  like when habitat layers move up and down mountains 
-  during ice ages species get isolated on the tops or in the valleys.
-]
+\paragraph{biology}
 
 One assumption of all standard models is that speciation event happen
 independently, that is, there are never two speciation events at the same time. 
@@ -460,11 +518,37 @@ this is false: when a habitat is split up,
 due to a geological barrier, this will result in two 
 species communities. The change from one to two communities is likely
 to affect both communities and trigger a speciation event in both
-communities. The inference error of ignoring co-occurring speciation is quantified by
+communities. 
+
+\alex{
+  ALP: Great! this is what i was looking for. 
+  You need much more of this kind of stuff. 
+  There are other scenarios you might want to discuss e.g. 
+  barriers that result in multiple species being isolated simultaneously 
+  like when habitat layers move up and down mountains 
+  during ice ages species get isolated on the tops or in the valleys.
+}
+
+\paragraph{razzo}
+
+The inference error of ignoring co-occurring speciation is quantified by
 me and Giovanni Laudanno in chapter 4.
 
-[
-  ALP: you need to provide a lot more information and discussion here 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bayesian phylogenetics
+%   assumptions mismatch
+\subsubsection{PBD}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\paragraph{biology}
+
+Another assumption of all standard models is that speciation event happen
+instantaneously, that is, when there is a speciation event, the two species
+are immediatly recognized as such. We know that speciation takes
+time. 
+
+\alex{
+  you need to provide a lot more information and discussion here 
   - why does speciation take time? Does it always take time 
   or can it be instantaneous? Are there examples of clades 
   that you can use to illustrate your arguments? 
@@ -473,19 +557,31 @@ me and Giovanni Laudanno in chapter 4.
   that at least allows speciation to occur gradually is needed. 
   Again, highlight how this has been implemented to infer speciation dynamics 
   from tree but oddly the models used to infer the tree in the first place ignore this. 
-]
-Another assumption of all standard models is that speciation event happen
-instantaneously, that is, when there is a speciation event, the two species
-are immediatly recognized as such. We know that speciation takes
-time. 
+}
+
+\paragraph{raket}
+
 The inference error of ignoring this fact is quantified by
 me in chapter 5.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{pirouette}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+To be able to determine the impact of using a standard phylogentic
+model, when we know the biological process in more complex than it
+assumes, me and Giovanni Laudanno developed an R package 
+to quantify the error we make due to this mismatch, which is described
+in chapter 3.
+
+\subsection{conclusion}
 
 In chapter 6, I show which conclusions can be drawn from these chapters
 
 \references{dissertation}
 
-\subsection{Photo attribution}
+\section{Photo attribution}
 
 Figure \ref{fig:long_enduring_and_young_species},
 the left image,
@@ -533,15 +629,13 @@ is marked as being in the public domain.
 by Hadonos
 is Marked as being in the public domain.
 
-
-
-
-
-[
-  ALP (note the comments were made about the 
+\richel{
+  note the comments below were made about the 
   Synthesis-wrongly-assumed-to-be-Introduction, so these points should be in the
-  Introduction, but these comments are not about this doc):
+  Introduction, but these comments are not about this doc
+}
 
+\alex{
   First, is to take a step back and consider your work in the broader context. 
   Why do we need to be able to accurately infer phylogenetic relationships? 
   Why is this important? What questions rely on this? 
@@ -551,25 +645,31 @@ is Marked as being in the public domain.
   a key tool to do this is phylogenies, 
   there have been major advances in methods to infer evolutionary processes 
   but all this depends on an accurate phylogeny.
-
+ }
+\alex{
   Second, try and be more biological. 
   The document is quite technical and methods focussed 
   but i think you need to ensure that the biological process is forefront. 
   It is never made clear why these new speciation models 
   that you have implemented are more realistic than the standard models.
-
+ }
+\alex{
   Third, once you have set the scene you then need to identify 
   the problem and propose the solution. e.g. current tree inference 
   are based on models of the speciation process. 
   But these are very simplistic compared to how speciation actually happens. 
-  We suspect that this may lead to biased inference and the aim of this project is therefore to…..
-
+  We suspect that this may lead to biased inference and the aim 
+  of this project is therefore to.
+ }
+\alex{
   Fourth, once you have set the scene and presented 
   the problem you can then discuss in more detail what 
   each of your chapters addresses. Overall, I found the layout and 
-  titles of ‘past’ and ‘open questions and future work’ confusing 
+  titles of 'past' and 'open questions and future work' confusing 
   e.g the second of these sections has suggestions for further work 
   as well as description of what you did. I suggest this is re-organised.
-
-  Finally, you need to work on having a strong conclusion that brings together all your research findings and presents your vision for the field.
-]
+ }
+\alex{
+  Finally, you need to work on having a strong conclusion that brings 
+  together all your research findings and presents your vision for the field.
+}
