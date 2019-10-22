@@ -3,26 +3,177 @@
 %% Start the actual chapter on a new page.
 \newpage
 
-\alex{
-  I feel the two aspects of the introduction that need the most work are 
-  1) better explaining why it is so important 
-     that we can accurately reconstruct phylogenetic relationships 
-  2) better explaining why current models may not be adequate 
-     and what new models need to be developed. Just saying that current 
-     models assume 'x' but this may not be appropriate if the real process 
-     is 'y' but we don't know 'y', is not enough. Instead, you really need to 
-     delve into the speciation literature, discussing the theory and 
-     empirical evidence for how the speciation process occurs, 
-     illustrating your discussion with real world examples. 
-     Have you read 'Speciation' by Coyne and Orr and also 'Speciation 
-     in Birds' by Trevor Price? These two books are excellent.
-}
-
 \noindent
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Relatedness}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\dropcap{A}{ll} species on Earth are related, as all organisms are derived from
+a same common ancestor, which is called the universal common ancestor. 
+It is estimated that the
+last universal common ancestor (LUCA) lived around 
+3.5 (\cite{doolittle2000uprooting, glansdorff2008last}), 
+to 4.5 (\cite{betts2018integrated}) billion years
+ago.
+It is unknown how LUCA looks like, but evidence points that
+it was anaerobic, autotrophic and thermophilic, with a cell membrane 
+similar to modern bacteria and 
+eukaryotes \cite{akanuma2019common, weiss2016physiology}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+  \includegraphics[width=0.5\textwidth]{luca.png}
+  \caption{
+    Artistic representation of the last universal common ancestor (artist
+    unknown). In reality, we do now know how it looked like, although
+    there is evidence that its cell membrane may be similar
+    to those in modern bacteria and eukaryotes \cite{akanuma2019common}.
+  }
+  \label{fig:luca}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Relatedness
+\subsection{introduction: domains}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+LUCA and its descendants speciated, resulting in the so-called
+tree of life (see figure \ref{fig:tree_of_life}). This tree
+of life's most important clades resemble the domains of life:
+bacteria, archaea, and eukaryotes. Representing the ancestry of
+life as a tree is, however, partially false: there is exchange
+of genetic material between some branches. Visualizing these
+relations would results in a network of life. Nevertheless,
+a LUCA can be identified, hinting the horizontal gene flow is
+not overly strong \cite{theobald2010formal},
+thus using a phylogenetic tree to depict the history of life 
+is a defendible simplification.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+  \includegraphics[height=0.5\textheight]{tree_of_life_2016.jpg}
+  \caption{
+    The tree of life (\cite{hug2016new}). 
+    In the middle the last universal common ancestor.
+  }
+  \label{fig:tree_of_life}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Relatedness
+\subsection{multi-cellular species}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+For this thesis, we focus on multi-cellular organisms.
+These bigger species are the visible contributors of
+biological diversity. 
+
+No need to preserve bacteria.
+
+Speciation is probably more interesting in multi-cellular species, especially
+when sexual.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Classifying species}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+A first very basic question within the field of biology,
+is to ask which species are closest related to
+one another. 
+
+Take, for example, the 8 crocodilian species 
+depicted in figure \ref{fig:crocodialians}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+  \includegraphics[width=1.0\textwidth]{crocodilians.png}
+  \caption{
+    Eight members of the order of crocodilians, one of which
+    has gone extinct
+  }
+  \label{fig:crocodialians}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Relatedness
+\subsection{answer with morphology}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+One way to classify species is to use morphological characteristics.
+
+The advantage is that it can be used on fossils, if the
+species does fossilize.
+Figure \ref{fig:crocodilians_cladogram_morphology} shows an
+example of a cladogram based on 164 morphological 
+characterististics.
+
+Disadvantages: not all species fossilize (e.g. squids), 
+different species may look alike (e.g. common chiffchaff (Phylloscopus collybita) 
+and willow warbler (Phylloscopus trochilus)), limited amout of characteristics,
+mutation rate of traits are unique (i.e. change in beak
+size is unrelated to change in brain size in other species).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+  \includegraphics[width=1.0\textwidth]{brochu_2000.png}
+  \caption{
+    Classification of crocodilians based on 164 morphological
+    characteristics, adapted from \cite{brochu2000phylogenetic}.
+    \richel{figure is sloppy}
+  }
+  \label{fig:crocodilians_cladogram_morphology}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Relatedness
+\subsection{answer with DNA}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+A modern way is to use DNA.
+
+Advantages: universal (all species share the same citric acid cycle,
+mutation rates of one species can be compared to other species),
+much information.
+
+Disadvantages: computatationally demanding, due to much information.
+
+Figure \ref{crocodilians_cladogram_mitochondrial_dna}
+show a classification of crocodilians based on 13776 basepairs of
+mitochondric DNA, adapted from \cite{milian2018mitogenomic}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+  \includegraphics[width=1.0\textwidth]{milian_garcia_2018.png}
+  \caption{
+    Classification of crocodilians based on 13776 basepairs of
+    mitochondric DNA, adapted from \cite{milian2018mitogenomic}.
+    \richel{figure is sloppy}
+  }
+  \label{fig:crocodilians_cladogram_mitochondrial_dna}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Relatedness: biological relevance}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Knowing which species are closest related to
+one another goes deeper than just
+being able to do taxanomic bookkeeping. Each
+speciation event, gives us a hint in understanding speciation.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Speciation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
-\dropcap{S}{peciation} is the process that creates new species,
+Speciation is the process that creates new species,
 connecting all of life to one shared common ancestor. It is a process
 that has resulted in the millions of species on Earth nowadays, 
 as well as in the many species that have gone extinct.
@@ -48,67 +199,6 @@ shows an example of each.
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Relatedness}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-All species on Earth are related, as all organisms are derived from
-a same universal common ancestor. It is estimated that the
-last universal common ancestor (LUCA) lived around 
-3.5 (\cite{doolittle2000uprooting, glansdorff2008last}), to 4.5 billion years
-ago.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Relatedness
-\subsection{introduction}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-A first very basic question within the field of biology,
-is to ask which species are closest related to
-one another. Take, for example, the 8 crocodilian species 
-depicted in figure \ref{fig:crocodialians}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Relatedness
-\subsection{answer with morphology}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-To 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Relatedness
-\subsection{answer with DNA}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Relatedness
-\subsection{difference between morphology versus DNA}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-You may come up with one or more pairs of hypothesized closest-related species,
-but you will probably get stuck on which ancestors of these pairs
-are most closely related. Note that doing the other way around, to use
-morphology to classify species, is tricky: how to decide when the morphology 
-between two specimens is different enough to classify these as two species?
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
-  \includegraphics[width=1.0\textwidth]{crocodilians.png}
-  \caption{
-    Eight members of the order of crocodilians
-  }
-  \label{fig:crocodialians}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Relatedness: biological relevance}
-
-Knowing which species are closest related to
-one another goes deeper than just
-being able to do taxanomic bookkeeping. Each
-speciation event, gives us a hint in understanding speciation.
 From two sister species, we can try to deduce the cause
 if their speciation. It could be that the ancestor species
 got geographically isolated and that this would be a major
@@ -118,18 +208,26 @@ for example, by the ancestral species evolves from a generalist
 species into to specialist species. Also, are some species (and their
 descendants) likelier to speciate, and if yes, what causes that?
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Relatedness: tools}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \richel{Describe early computational tools to create cladograms here}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Time of speciation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Time of speciation: introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The second very basic biological question, is to 
 ask \emph{when} these speciation events took place.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Time of speciation: biological relevance}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Also this question goes deeper than just 
 adding a timescale to phylogenies.
@@ -143,13 +241,17 @@ in return. An open question is whether species communities get
 saturated to a maximum number of species, or that new community members
 give rise to new niches for more new members.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Time of speciation: answer with morphology fails}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 This question cannot be answered based on morphologies of the present-day
 species alone, because morphology is a complex trait, and the pace at
 which morphology changes in time is unknown or unpredictable.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Time of speciation: answer with fossils is OK}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 This second question can be answered by
 using a classical approach, 
@@ -163,7 +265,9 @@ we could try to determine the number of species in each timepoint,
 but that would only work if we could confidently define what a
 species is. We cannot, because speciation is usually a gradual process.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Time of speciation: answer with DNA is awesome}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 This second question can also be answered 
 using a modern approach, 
@@ -198,7 +302,9 @@ but in the simulation studies in this thesis, we will ignore this.
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{phylogenetics}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The field of phylogenetics is devoted to
 use heritable information of (usually) extant species to
@@ -220,7 +326,9 @@ All of this depends on an accurate reconstruction the species' dated phylogenies
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Non-Bayesian Phylogenetics: simple example}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 There is a rich toolset to infer a phylogeny from heritable 
 information (which, in this thesis, always consists of a DNA alignment).
@@ -236,7 +344,9 @@ which gave rise to the first two ancestral species.
 This first split in the tree is called the crown,
 the moment in time this occurred is called the crown age.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Non-Bayesian Phylogenetics: pipeline}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The problem with phylogenies is, 
 that it is impossible to go out in the field and measure one, 
@@ -248,7 +358,9 @@ thesis: how well can we construct a
 phylogeny from an alignment?} What is the error we
 make when we construct a phylogeny?
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Non-Bayesian Phylogenetics: pipeline simple example}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Answering this research question is, at first glance, easy: 
 
