@@ -5,783 +5,98 @@
 
 \noindent
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Relatedness}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Once upon a time, there was the first living organism, the 
+First Universal Common Ancestor (FUCA).
+We do not know when it lived.
+
+% 
+%    ----- FUCA
+%
+% ---+---- (time)
+%    t0
+
+One unknown day, FUCA speciated, resulting in two species.
+This event doubled the biodiversity on Earth.
+The two species, which we will call species A and B
+are sister species.
+We do not know what caused the speciation.
+
+%     +---- A
+%  ---+
+%     +---- B
+%
+% -+--+--- (time)
+%  t0 t1
+
+Both species A had their unknown histories: they speciated themselves,
+and they and/or their descendants went extinct. 
+Extinction is a common event. Let's assume A and/or its clade went
+exctint and that species B created a sister species C. Species B
+and C will give rise to all biodiversity. This ancestor of species B and C 
+is called the Last Universal Common Ancestor and lived around [then].
+
+            
+%     +--------x   A
+%  ---+     
+%     |     +------- B
+%     +-----+
+%           +------- C
+%
+% -+--+-----+--+---- (time)
+%  t0 t1    t2 t3
+
+The biodiversity derived from LUCA is important to us humans, apart from
+that is has created us. A review paper (Cardinale et al.) shows that 
+biodiversity unsually improves ecosystem services that are 
+positive for human well-being.
+
+%
+% Ecosystem function
+%
+%   |  _______
+%   | /
+%   |/
+%   +--------------
+%
+%     Biological diversity
+%
+
+Speciation is the process that increases biological diversity 
+and is therefore worth to study.
+We can look at the mechanism behind each speciation event,
+but we can also look at patterns 
+of speciation events through evolutionary time.
+
+%
+% [picture of speciation machanism] | [picture of a trait that increases speciation rate]
+%                                   | 
+% Speciation mechanism:             | Speciation events though time:                           
+% what caused this speciation       | what are the patterns of
+% event to occur?                   | speciation events?
+% In this case, a geographics       | In this case, a trait that was a key innovation
+% barrier caused the initial        | gave rise to a higher speciation rate
+% species to diverge                | 
+%
+
+The field of phylogenetics is the research discipline that
+infers phylogenies from (mostly) genetic data and studies the 
+branching patterns of phylogenies found in nature.
+One example is the Tree Of Life, which uses aligned protein sequences
+of many species to create one big phylogeny of all (sequenced) life on Earth
+
+%
+% [Tree Of Life]
+%
+% The Tree Of Life [reference]
+
+To create a phylogeny from a protein alignment, there have been many assumptions 
+made, regarding the evolution of a protein sequence, 
+the rate(s) at which this happens and the rate(s) at which 
+a branching/speciation event takes place. 
 
-\dropcap{A}{ll} species on Earth are related, as all organisms are derived from
-a same common ancestor, which is called the universal common ancestor. 
-It is estimated that the
-last universal common ancestor (LUCA) lived around 
-3.5 (\cite{doolittle2000uprooting, glansdorff2008last}), 
-to 4.5 (\cite{betts2018integrated}) billion years
-ago.
-It is unknown how LUCA looks like, but evidence points that
-it was anaerobic, autotrophic and thermophilic, with a cell membrane 
-similar to modern bacteria and 
-eukaryotes \cite{akanuma2019common, weiss2016physiology}.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
-  \includegraphics[width=0.5\textwidth]{luca.png}
-  \caption{
-    Artistic representation of the last universal common ancestor (artist
-    unknown). In reality, we do now know how it looked like, although
-    there is evidence that its cell membrane may be similar
-    to those in modern bacteria and eukaryotes \cite{akanuma2019common}.
-  }
-  \label{fig:luca}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Relatedness
-\subsection{introduction: domains}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-LUCA and its descendants speciated, resulting in the so-called
-tree of life (see figure \ref{fig:tree_of_life}). This tree
-of life's most important clades resemble the domains of life:
-bacteria, archaea, and eukaryotes. Representing the ancestry of
-life as a tree is, however, partially false: there is exchange
-of genetic material between some branches. Visualizing these
-relations would results in a network of life. Nevertheless,
-a LUCA can be identified, hinting the horizontal gene flow is
-not overly strong \cite{theobald2010formal},
-thus using a phylogenetic tree to depict the history of life 
-is a defendible simplification.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
-  \includegraphics[height=0.5\textheight]{tree_of_life_2016.jpg}
-  \caption{
-    The tree of life (\cite{hug2016new}). 
-    In the middle the last universal common ancestor.
-  }
-  \label{fig:tree_of_life}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Relatedness
-\subsection{multi-cellular species}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-For this thesis, we focus on multi-cellular organisms.
-These bigger species are the visible contributors of
-biological diversity. 
-
-No need to preserve bacteria.
-
-Speciation is probably more interesting in multi-cellular species, especially
-when sexual.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Classifying species}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-A first very basic question within the field of biology,
-is to ask which species are closest related to
-one another. 
-
-Take, for example, the 8 crocodilian species 
-depicted in figure \ref{fig:crocodialians}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
-  \includegraphics[width=1.0\textwidth]{crocodilians.png}
-  \caption{
-    Eight members of the order of crocodilians, one of which
-    has gone extinct
-  }
-  \label{fig:crocodialians}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Relatedness
-\subsection{answer with morphology}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-One way to classify species is to use morphological characteristics.
-
-The advantage is that it can be used on fossils, if the
-species does fossilize.
-Figure \ref{fig:crocodilians_cladogram_morphology} shows an
-example of a cladogram based on 164 morphological 
-characterististics.
-
-Disadvantages: not all species fossilize (e.g. squids), 
-different species may look alike (e.g. common chiffchaff (Phylloscopus collybita) 
-and willow warbler (Phylloscopus trochilus)), limited amout of characteristics,
-mutation rate of traits are unique (i.e. change in beak
-size is unrelated to change in brain size in other species).
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
-  \includegraphics[width=1.0\textwidth]{brochu_2000.png}
-  \caption{
-    Classification of crocodilians based on 164 morphological
-    characteristics, adapted from \cite{brochu2000phylogenetic}.
-    \richel{figure is sloppy}
-  }
-  \label{fig:crocodilians_cladogram_morphology}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Relatedness
-\subsection{answer with DNA}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-A modern way is to use DNA.
-
-Advantages: universal (all species share the same citric acid cycle,
-mutation rates of one species can be compared to other species),
-much information.
-
-Disadvantages: computatationally demanding, due to much information.
-
-Figure \ref{crocodilians_cladogram_mitochondrial_dna}
-show a classification of crocodilians based on 13776 basepairs of
-mitochondric DNA, adapted from \cite{milian2018mitogenomic}.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
-  \includegraphics[width=1.0\textwidth]{milian_garcia_2018.png}
-  \caption{
-    Classification of crocodilians based on 13776 basepairs of
-    mitochondric DNA, adapted from \cite{milian2018mitogenomic}.
-    \richel{figure is sloppy}
-  }
-  \label{fig:crocodilians_cladogram_mitochondrial_dna}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Relatedness: biological relevance}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Knowing which species are closest related to
-one another goes deeper than just
-being able to do taxanomic bookkeeping. Each
-speciation event, gives us a hint in understanding speciation.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Speciation}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
-Speciation is the process that creates new species,
-connecting all of life to one shared common ancestor. It is a process
-that has resulted in the millions of species on Earth nowadays, 
-as well as in the many species that have gone extinct.
-Some speciation events that gave rise to extant species, 
-happened earlier than others,
-from hundreds of millions of years ago (so-called 'long-enduring species',
-or, informally, 'living fossil') 
-to more recent ones. See figure \ref{fig:long_enduring_and_young_species} 
-shows an example of each.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
-  \includegraphics[width=0.80\textwidth]{latimeria_chalumnae.jpg}
-  \includegraphics[width=0.18\textwidth]{homo_sapiens.jpg}
-  \caption{
-    An long-enduring species (left) and a young species (right).
-    The species at the left is a preserved specimen of \textit{Latimeria chalumnae}, 
-    estimated to exist for hundreds of millions of year.
-    The species at the right is the \textit{Homo sapiens}, 
-    existing for around a third of a million years.
-  }
-  \label{fig:long_enduring_and_young_species}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-From two sister species, we can try to deduce the cause
-if their speciation. It could be that the ancestor species
-got geographically isolated and that this would be a major
-cause of speciation (e.g. Mayr, 1942). But the reason for
-that speciation event may have also been ecological (e.g. Lack, 1947),
-for example, by the ancestral species evolves from a generalist
-species into to specialist species. Also, are some species (and their
-descendants) likelier to speciate, and if yes, what causes that?
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Relatedness: tools}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\richel{Describe early computational tools to create cladograms here}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Time of speciation}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Time of speciation: introduction}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-The second very basic biological question, is to 
-ask \emph{when} these speciation events took place.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Time of speciation: biological relevance}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Also this question goes deeper than just 
-adding a timescale to phylogenies.
-Knowing when a speciation event took place,
-opens up many clues in understanding speciation, as,
-for example, that moment in time may be linked to a large geographical change.
-Additionally, we can (try to) deduce the species community through time.
-Not only does speciation influence species communities (by adding
-new members), a species community might influence the process of speciation
-in return. An open question is whether species communities get
-saturated to a maximum number of species, or that new community members
-give rise to new niches for more new members.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Time of speciation: answer with morphology fails}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-This question cannot be answered based on morphologies of the present-day
-species alone, because morphology is a complex trait, and the pace at
-which morphology changes in time is unknown or unpredictable.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Time of speciation: answer with fossils is OK}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-This second question can be answered by
-using a classical approach, 
-by using the morphology of fossils.
-This approach can only be used if the species \emph{can} fossilize,
-and those fossils are found in multiple points in time.
-Even if this is the case, there are caveats. Using morphology on
-extinct species is even trickier, as species change their appearance in time.
-Also an imaginary time machine would not help us out:
-we could try to determine the number of species in each timepoint,
-but that would only work if we could confidently define what a
-species is. We cannot, because speciation is usually a gradual process.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Time of speciation: answer with DNA is awesome}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-This second question can also be answered 
-using a modern approach, 
-by using the DNA sequences of extant species,
-as shown, for example, in figure \ref{fig:alignment}.
-Because DNA is inherited from parent to offspring
-and changes through times, it carries each species' 
-evolutionary histories within it.
-The point in time when a species speciates is
-marked by the two daughter species having seperate mutations
-from that moment on.
-Due to this, we can easily find closest related species 
-by measuring the similarity in DNA sequences.
-If we know how frequent mutations occur, we can already
-do a rough estimation of when the speciation event took place.
-In reality, DNA sequences of different species 
-varies in length, due to insertions and deletions in genetic sequences,
-but in the simulation studies in this thesis, we will ignore this.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
-  \includegraphics[width=0.8\textwidth]{alignment_40_with_root.png}
-  \caption{
-    A 40-nucleotide DNA alignment of six hypothetical species. The species
-    are named A to and including F. 
-    The four colors denote the four different nucleotides,
-    in which the red color resembles adenine, yellow depicts cytosine, 
-    green is for guanine, and blue resembles thymine. The top
-    row shows the (artificial) root sequence, which is usually unknown.
-  }
-  \label{fig:alignment}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{phylogenetics}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-The field of phylogenetics is devoted to
-use heritable information of (usually) extant species to
-infer a dated phylogeny. Phylogenetics is a field that has
-made enourmous leaps thanks to the increase of computational power.
-Phylogenetics allows us to follow the evolution and distribution
-of traits and behavior in time, and -due to this-
-understand the evolution and distribution of species diversity.
-All of this depends on an accurate reconstruction the species' dated phylogenies.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
-  \includegraphics[width=0.4\textwidth]{phylogeny_40_upgma.png}
-  \caption{
-    Phylogeny created from the alignment in figure \ref{fig:alignment} 
-    using a quick-and-dirty methodology.
-  }
-  \label{fig:phylogeny_upgma}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Non-Bayesian Phylogenetics: simple example}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-There is a rich toolset to infer a phylogeny from heritable 
-information (which, in this thesis, always consists of a DNA alignment).
-Figure \ref{fig:phylogeny_upgma} shows a phylogeny inferred
-from the alignment 
-in figure \ref{fig:alignment} using a quick-and-dirty methodology (of
-which the name is irrelevant).
-The phylogeny shows the six hypothetical species and their evolutionary 
-relationships. Going from left to right, we travel through time from 
-the past to the present. 
-The leftmost vertical line indicates the first speciation event, 
-which gave rise to the first two ancestral species. 
-This first split in the tree is called the crown,
-the moment in time this occurred is called the crown age.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Non-Bayesian Phylogenetics: pipeline}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-The problem with phylogenies is, 
-that it is impossible to go out in the field and measure one, 
-as they depict which species lived when \emph{in the past}.
-Instead, we \emph{construct} phylogenies. For example,
-the phylogeny in figure \ref{fig:phylogeny_upgma}, how well
-does match the true phylogeny? \textbf{That question, is the main question of this 
-thesis: how well can we construct a
-phylogeny from an alignment?} What is the error we
-make when we construct a phylogeny?
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Non-Bayesian Phylogenetics: pipeline simple example}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Answering this research question is, at first glance, easy: 
-
-\begin{enumerate}[label=\arabic*)]\itemsep2pt
-  \item simulate a true phylogeny.
-  \item simulate an alignment that follows that phylogeny.
-  \item construct a phylogeny from that alignment.
-  \item measure the difference between the true and constructed phylogeny.
-\end{enumerate}
-
-This workflow is depicted in figure \ref{fig:research_workflow_single}.
-All steps, however, are more complex than just this.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Figure 1
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
-  \centering
-  \resizebox {0.8\columnwidth} {!} {
-    \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=4cm, semithick]   
-    \tikzstyle{every state}=[]
-    \node[state] (A) [rectangle] {
-      \includegraphics[width=0.3\textwidth]{phylogeny.png}
-    };   
-    \node[state] (AL) [above left=-0.25cm and -0.25cm of A, fill=white] {
-      1
-    };   
-    \node[state] (B) [below of = A, rectangle] {
-      \includegraphics[width=0.6\textwidth]{alignment_40_with_root.png}
-    };   
-    \node[state] (BL) [above left=-0.25cm and -0.25cm of B, fill=white] {
-      2
-    };   
-    \node[state] (C) [below of = B, rectangle] {
-      \includegraphics[width=0.3\textwidth]{phylogeny_40_upgma.png}
-    };   
-    \node[state] (CL) [above left=-0.25cm and -0.25cm of C, fill=white] {
-      3
-    };
-    \node[state] (D) [below of = C, rectangle] {
-      \includegraphics[width=0.4\textwidth]{nltt_40_true_and_upgma.png}
-    };   
-    \node[state] (DL) [above left=-0.25cm and -0.25cm of D, fill=white] {
-      4
-    };
-    \path 
-      (A) edge [anchor = south] node {} (B)
-      (B) edge [anchor = south] node {} (C)
-      (A) edge [bend left = 80, anchor = east] node {} (D)
-      (C) edge [anchor = south] node {} (D)
-    ; 
-    \end{tikzpicture}
-  }
-  \caption{
-    (Simplified) method to answer the research question of this thesis:
-    1. simulate a true phylogeny. 
-    2. simulate an alignment that follows that phylogeny. 
-    3. construct a phylogeny from that alignment.
-    4. compare the true and constructed phylogeny.
-    Note the big difference between the true and constructed phylogeny
-  }
-  \label{fig:research_workflow_single}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Bayesian phylogenetics}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Bayesian phylogenetics
-\subsection{introduction}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Constructing a phylogeny from an alignment is the step that
-gets most attention in this thesis, as it is also the most complex
-one. Unlike the methods described earlier, 
-we do not construct one single phylogeny, 
-but we construct a distribution of multiple phylogenies.
-Within this distribution of multiple phylogenies, the phylogenies
-that are more likely, will be present more often.
-This method is called Bayesian phylogenetics, in which we use
-a Bayesian approach to create phylogenies based on genetics.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Bayesian phylogenetics
-\subsection{BEAST2}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Bayesian phylogenetics
-\subsection{babette}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-To be able to do the phylogentic inference needed for the rest of this
-thesis, I developed an R package to do so, which
-is discussed in chapter 2. Because a Bayesian inference can be set up in
-many ways, the greatest asset of that package is that it gives a
-consistent grammar to express each setup. Additionally, the R package allows
-to run Bayesian inference from the command-line, which is essential for
-the theoretical studies in this thesis.
-
-If we can measure the error we make in our inference, 
-we can try and improve the inference. 
-One way to improve it, is to use a better inference model.
-Ideally, we would use the same inference model that gave rise to
-the true phylogeny and alignment, but, alas, 
-we (usually) do not know that model.
-We do not know that model, because we do not know the
-model that nature used: the
-processes that cause speciation are possibly many, and 
-the mechanisms of each are unknown and/or debatable.
-
-\alex{
-  ALP: but you need to go into this in detail to build the case for 
-  why the existing models are unlikely to be sufficient or at least 
-  why it is important to explore potentially more realistic models
-}
-
-Due to this, we'll have to resort to the many phylogentic models 
-to explain the DNA (RNA, protein, morphological and fossil) data best.
-
-There are plenty of phylogentic models, ranging from simplistic to
-very complex. The most popular models make it into our
-phylogenetic programs (which, in turn, may make these models even
-more popular), which I will define as 'standard models'.
-When empiricist build a phylogenetic tree from their
-painstakingly acquired DNA alignment, they pick their favorite standard
-model or use an algorithm to select one. The empiricist assumes that the
-standard models are good enough for his/her cause.
-
-The standard models, however, make some assumptions that will not hold
-in all biological cases.
-
-\alex{
-  ALP: expand on this to explain what the standard model is 
-  and what assumptions they make
-}
-
-This will increase the error we make in
-our inference. But will that error be profound enough to reject using
-a standard model? 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Figure 1
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[H]
-  \centering
-  \resizebox {0.8\columnwidth} {!} {
-    \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=4cm, semithick]   
-    \tikzstyle{every state}=[]
-    \node[state] (A) [rectangle] {
-      \includegraphics[width=0.3\textwidth]{phylogeny.png}
-    };   
-    \node[state] (AL) [above left=-0.25cm and -0.25cm of A, fill=white] {
-      1
-    };   
-    \node[state] (B) [below of = A, rectangle] {
-      \includegraphics[width=0.6\textwidth]{alignment_40_with_root.png}
-    };   
-    \node[state] (BL) [above left=-0.25cm and -0.25cm of B, fill=white] {
-      2
-    };   
-    \node[state] (C) [below of = B, rectangle] {
-      \includegraphics[width=0.3\textwidth]{densitree_40.png}
-    };   
-    \node[state] (CL) [above left=-0.25cm and -0.25cm of C, fill=white] {
-      3
-    };
-    \node[state] (D) [below of = C, rectangle] {
-      \includegraphics[width=0.29\textwidth]{errors_40.png}
-    };   
-    \node[state] (DL) [above left=-0.25cm and -0.25cm of D, fill=white] {
-      4
-    };
-    \path 
-      (A) edge [anchor = south] node {} (B)
-      (B) edge [anchor = south] node {} (C)
-      (A) edge [bend left = 80, anchor = east] node {} (D)
-      (C) edge [anchor = south] node {} (D)
-    ; 
-    \end{tikzpicture}
-  }
-  \caption{
-    Method to answer the research question of this thesis:
-    1. simulate a true phylogeny. 
-    2. simulate an alignment that follows that phylogeny. 
-    3. infer a distribution of phylogenies from that alignment.
-    4. compare the true phylogenies with the inferred phylogenies.
-  }
-  \label{fig:research_workflow}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Bayesian phylogenetics
-\subsection{standard assumptions}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-With Bayesian inference, we need an alignment and our model assumptions to
-infer phylogenies.
-Different model assumptions will result in different trees.
-There are many assumptions to choose from, regarding
-the mutation of nucleotides in the DNA alignment, the
-DNA mutation rate of species and the speciation model.
-The model assumptions specify what we assume to be true regarding how
-the alignment came to be. 
-
-For example, we can assume that:
-
-\begin{enumerate}[label=\arabic*)]\itemsep2pt
-  \item the true phylogeny had a constant speciation and extinction rate 
-  \item the mutation rate is constant and equal for all species
-  \item all mutations between nucleotides are equally likely
-\end{enumerate}
-
-This set of model assumptions is simple and -party due to that-
-commonly used. Figure \ref{fig:phylograms_for_different_tree_priors}
-shows an example, that, for an alignment obtained from primates, it matters
-little if extinction is assumed to be absent or constant.
-
-\alex{
-  This is the point at the heart of these thesis, right? 
-  In order to infer phylogenetic topology and divergence times 
-  we need to assume a certain model for speciation and extinction. 
-  You need to build the case for why the current model used 
-  may not be appropriate and why more complex models may be required. 
-  You really need to delve into the 1) literature on speciation, 
-  to discus the biological/geographical/environmental mechanisms 
-  underlying speciation and our latest understanding of how speciation works 
-  2) literature on modelling diversification, highlighting 
-  how there have been major advances in modelling different modes and tempo 
-  of speciation when estimating diversification 
-  but not (surprisingly) when infering trees. 
-  You need to highlight the logical inconsistency of this 
-  and why it could be severely problematic - if we assume certain speciation 
-  modes when infering trees does this bias what speciation mode 
-  we would infer from that tree??  
-}
-
-\richel{
-  Although I think this feedback is excellent, I will prioritize handing
-  in a thesis chapter approximately on time, therefore ignoring most of this
-  feedback for now
-}
-
-\begin{figure}[H]
-  \includegraphics[width=0.5\textwidth]{primates_yule.png}
-  \includegraphics[width=0.5\textwidth]{primates_bd.png}
-  \caption{
-    Phylograms created from the same alignment, using three different
-    speciation models: left: Yule, right: Birth-Death. Both
-    timescales are normalized to one. Note that for both speciation
-    models, the genus \textit{Pan} and the species \textit{Homo sapiens}
-    separated at approximately the same time.
-  }
-  \label{fig:phylograms_for_different_tree_priors}
-\end{figure}
-
-The result of a Bayesian inference, is -to be precise- a posterior
-disribution of jointly-inferred phylogenies and model parameter estimates,
-simply called 'posterior' in this thesis.
-The way such a posterior is generated assures that more likely phylogenies 
-are present more often. 
-This distribution of phylogenies shows the
-(un)certainty of the inference.
-For example, the posterior phylogenies in figure \ref{fig:research_workflow},
-panel 3, show a high degree of uncertainty, as the
-inferred phylogenies vary widely in shape. The posterior correctly
-suggests two clades (ABC and DEF), but does not confidently show
-the two most related taxa (AB and DE). We can already make 
-the rough claim that, would the phylogeny in panel 1 
-in figure \ref{fig:research_workflow} depict
-a true phylogeny, we make a big error in its inference.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Bayesian phylogenetics
-\subsection{assumptions mismatch}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-There are, however, plenty of biological cases where the assumption
-mismatch: 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Bayesian phylogenetics
-%   assumptions mismatch
-\subsubsection{MBD}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Bayesian phylogenetics
-%   assumptions mismatch
-\subsubsection{MBD}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\paragraph{biology}
-
-One assumption of all standard models is that speciation event happen
-independently, that is, there are never two speciation events at the same time. 
-There are biological scenario's in which may say
-this is false: when a habitat is split up, 
-due to a geological barrier, this will result in two 
-species communities. The change from one to two communities is likely
-to affect both communities and trigger a speciation event in both
-communities. 
-
-\alex{
-  ALP: Great! this is what i was looking for. 
-  You need much more of this kind of stuff. 
-  There are other scenarios you might want to discuss e.g. 
-  barriers that result in multiple species being isolated simultaneously 
-  like when habitat layers move up and down mountains 
-  during ice ages species get isolated on the tops or in the valleys.
-}
-
-\paragraph{razzo}
-
-The inference error of ignoring co-occurring speciation is quantified by
-me and Giovanni Laudanno in chapter 4.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Bayesian phylogenetics
-%   assumptions mismatch
-\subsubsection{PBD}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\paragraph{biology}
-
-Another assumption of all standard models is that speciation event happen
-instantaneously, that is, when there is a speciation event, the two species
-are immediatly recognized as such. We know that speciation takes
-time. 
-
-\alex{
-  you need to provide a lot more information and discussion here 
-  - why does speciation take time? Does it always take time 
-  or can it be instantaneous? Are there examples of clades 
-  that you can use to illustrate your arguments? 
-  You need to delve into the theory and empirical evidence of speciation 
-  here to make a compelling case for why a protracted model 
-  that at least allows speciation to occur gradually is needed. 
-  Again, highlight how this has been implemented to infer speciation dynamics 
-  from tree but oddly the models used to infer the tree in the first place ignore this. 
-}
-
-\paragraph{raket}
-
-The inference error of ignoring this fact is quantified by
-me in chapter 5.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{pirouette}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-To be able to determine the impact of using a standard phylogentic
-model, when we know the biological process in more complex than it
-assumes, me and Giovanni Laudanno developed an R package 
-to quantify the error we make due to this mismatch, which is described
-in chapter 3.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{conclusion}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-In chapter 6, I show which conclusions can be drawn from these chapters
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Bibliography
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% MEE style
-\bibliographystyle{mee}
-\bibliography{introduction}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\richel{
-  note the comments below were made about the 
-  Synthesis-wrongly-assumed-to-be-Introduction, so these points should be in the
-  Introduction, but these comments are not about this doc
-}
-
-\alex{
-  First, is to take a step back and consider your work in the broader context. 
-  Why do we need to be able to accurately infer phylogenetic relationships? 
-  Why is this important? What questions rely on this? 
-  There needs to be a logical progression 
-  that sets the scene and highlights to the reader 
-  why your work is relevant e.g. we need to understand biodiversity, 
-  a key tool to do this is phylogenies, 
-  there have been major advances in methods to infer evolutionary processes 
-  but all this depends on an accurate phylogeny.
- }
-\alex{
-  Second, try and be more biological. 
-  The document is quite technical and methods focussed 
-  but i think you need to ensure that the biological process is forefront. 
-  It is never made clear why these new speciation models 
-  that you have implemented are more realistic than the standard models.
- }
-\alex{
-  Third, once you have set the scene you then need to identify 
-  the problem and propose the solution. e.g. current tree inference 
-  are based on models of the speciation process. 
-  But these are very simplistic compared to how speciation actually happens. 
-  We suspect that this may lead to biased inference and the aim 
-  of this project is therefore to.
- }
-\alex{
-  Fourth, once you have set the scene and presented 
-  the problem you can then discuss in more detail what 
-  each of your chapters addresses. Overall, I found the layout and 
-  titles of 'past' and 'open questions and future work' confusing 
-  e.g the second of these sections has suggestions for further work 
-  as well as description of what you did. I suggest this is re-organised.
- }
-\alex{
-  Finally, you need to work on having a strong conclusion that brings 
-  together all your research findings and presents your vision for the field.
-}
