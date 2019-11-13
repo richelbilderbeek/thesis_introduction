@@ -90,28 +90,71 @@ causes of speciation]
 % a geographic barrier                | ecological factors
 %
 
-Instead of look at the mechanism behind each speciation event,
+Instead of looking at the mechanism behind each speciation event,
 we can also look at patterns of speciation events through evolutionary time.
-How do the rates at which speciation and extinction take place through time
-change? Is there an upper limit on the number of species?
-[ADD FOSSILS TO ]
+How often do speciation and extinction events take place?
+Are speciation and extinctions rates constant or do they change?
+What causes a change in speciation or extinction rate?
+Is there an upper limit on the number of species?
+
+There are two ways to look in evolutionary time:
+using fossils and molecular phylgenies.
+
+% [picture of El Graeco fossil] | [](800px-Hominini_lineage.svg.png), from https://en.wikipedia.org/wiki/File:Hominini_lineage.svg
+%                               | 
+%  El Greaco                    | HS     Pan
+%                               |  \    /
+%                               |   \  /
+%                               |    \/
+%                               |     \
+
+A classic way to look back in evolutionary time is to use fossils,
+which are dated by the rock layers they are found in.
+Using fossils has its limitations. First, it is mostly species with hard body
+parts that are suitable to fossilize. Of such species, an organisms is still 
+only rarely preserved, of which only a fraction under ideal circumstances. Of 
+these fossils, only a fraction is discovered.
+One example of a famous fossil is 'El Graeco', 
+which may be the oldest known hominin \cite{fuss2017potential}, where
+homonins are the tribe (taxanomic group) we Homo sapiens share with the Panini.
 
 % [picture of adaptive radiation phylogeny] | [picture of DDD phylogeny]
 %                                           |
 % An adaptive radiation.                    | The number of species through time.
 %                                           | [use Etienne, DDD]
 
+A modern way to look back in evolutionary time is to use
+heritable characteristicts (DNA, RNA, protein) 
+of extant species to infer phylogenies. 
 The field of phylogenetics is the research discipline that
-infers phylogenies from heritable data (DNA, RNA, protein) and
-optionally adds morphological data and/or fossils. It strives
-to produce the most accurate phylogenies, regarding topology
-and speciation times.
+intends to infer the most accurate phylogenies possible, 
+regarding topology, speciation and extinction times,
+optionally adding morphological data and/or fossil data.
+Phylogenetics is applied in many settings, among
+others, species classification,
+forensics, conservation ecology
+and epidemiology \cite{lam2010use}.
 
-[Example with viruses?]
+% ![](edge_tree.png)                          | ![](Pristis-pristis_Simon-Fraser-University-1000x667.jpg),
+%                                             | from http://www.edgeofexistence.org/species/largetooth-sawfish/
+% The ED (evolutionary distinctiveness)       | 
+% of species A is higher than that of species | The Largetooth Sawfish (Pristis pristis) is at number 1 of
+% B or C, as more                             | the EDGE list, with an EDGE Score of 7.38, 
+% evolutionary history will be lost when      | with an ED Score of 99.298. Score is calculated by
+% that species goes extinct.                  | ![](edge_score.svg)
 
-%
-%
-%
+Accurate trees are important because they are used in 
+decision making in, among others, conservation ecology.
+In conservation ecology, accurate trees are important
+to correctly estimate the evolutionary distinctiveness (ED) of a species.
+The ED is the amount of evolutionary history lost when a species would go extinct.
+Together with the GE score ('Globally Endangered', from 0: 'Least Concern' 
+to 4: 'Critically Endangered') the ED is used to assign an EDGE score 
+to a species, so that conservation can prioritize its efforts on.
+
+% ![](phylip.gif) |
+%                 |
+% PHYLIP logo     |
 
 Phylogenetics has taken a huge flight, due to the massively increased
 computational power and techniques. Milestones are Felsensteyn's work
@@ -145,6 +188,23 @@ a branching/speciation event takes place. For example,
 the amino acids are assumed to follow the LG [Si Quang 
 Le and Olivier Gascuel, An Improved General Amino Acid Replacement Matrix] 
 which uses empirical transition rates.
+
+Selecting which inference model to use is non-trivial.
+On can use the 'measure is knowing' approach, or do a model comparison.
+
+The 'measure is knowing' starts by doing an inference with the simplest model.
+After this, use an inference model slight more complex and see if the results
+of the inference differ. If not, use the simpler method. Else, repeat with
+a more complex model.
+
+The model comparison approach uses algorithms to select the model that is
+most likely to have generated the data. 
+
+The effect of using a different inference model on the same data
+is not investigated systematically. For example, 
+if we use multiple deep calibration nodes, picking a
+wrong clock model has no impact anymore \cite{duchene2014impact}.
+The effect of tree prior remains uninvestigated \cite{alfaro2006posterior}.
 
 %
 % [part of LG transition rate matrix]
