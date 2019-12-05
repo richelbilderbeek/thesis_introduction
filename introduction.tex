@@ -200,6 +200,9 @@ a more complex model.
 The model comparison approach uses algorithms to select the model that is
 most likely to have generated the data. 
 
+Again, having a phylogenetic tree being correct is important,
+as decisions are made upon them. 
+
 The effect of using a different inference model on the same data
 is not investigated systematically. For example, 
 if we use multiple deep calibration nodes, picking a
@@ -211,11 +214,59 @@ The effect of tree prior remains uninvestigated \cite{alfaro2006posterior}.
 %
 % Part of an LG transition rate matrix
 
-For speciation, the most interesting part of the phylogenetic
+On the topic of speciation, the most relevant part of the phylogenetic
 assumptions is the tree prior. A tree prior is the Bayesian
-form of the knowledge about the speciation process.
-[BE MORE EXPLICIT HERE]
-[THE IMPORTANCE OF PHYLOGENTIC TREES]
+form of the knowledge about the speciation process, at the
+macro-evolutionary level. The tree prior determines how likely
+new branches form (a speciation event) and how likely branches end (an
+extinction event).
+
+Picking the optimal tree prior is important, as this will result (by 
+definition) in the most correct phylogeny to base decisions upon.
+
+Due to the importance of a correct phylogeny, theoreticians
+measure how well we can infer it. I will show some examples here:
+
+%
+%
+% revell2005under.gif
+%
+% Figure from \cite{revell2005under}. At the left was the true tree.
+% In the middle the inferred tree, that used the generative model
+% At the left the inferred tree when using a too simple inference model 
+
+We know, for example, that using a too simple inference model
+on trees with a known gamma \cite{pybus2000testing}, the inference will bias
+towards a negative gamma \cite{revell2005under}. A tree with
+a negative gamma has a decreasing speciation rate. 
+The biological relevance of this, is that an empiricist might
+attribute the finding of a negative gamma to some biological
+process, where in reality the negative gamma may be largely
+attributed to his/her choice of using an under-parameterized inference
+model.
+
+%
+% sarver2019choice.jpg
+%
+% Figure 3: Birth-death simulations.
+%
+% The top row of plots (A–D) refers to the 100-taxa cases, whereas the bottom row (E–H) refers to the 25-taxa cases. The median estimates of λ or r, estimated from the 10 original trees, are used as data for each boxplot. The title of each subplot refers to the simulation conditions. Each combination of tree priors and molecular clocks under which trees are estimated is listed on the x-axis. The distribution of estimates from the original trees is also displayed. Parameter estimates are highly congruent with the original trees under each set of simulation conditions.
+
+Another example of a study that measures the inference error
+we make when using an incorrect tree prior,
+shows that this has little effect on the correctness of the parameter 
+estimation \cite{sarver2019choice}. Note that this study already conflicts
+with the formerly discussed study (\cite{revell2005under})!
+
+The biological research shown in this thesis also investigates
+the inference error made from using an incorrect tree prior.
+Novel about the research in this thesis is the use of non-standard tree
+priors and the contribution of a framework to easily investigate
+the inference error.
+
+Because speciation models and tree priors are pivotal in this thesis, 
+I will here describe the two standard ones, as well as the two
+novel non-standard ones:
 
 The most basic speciation model
 is the Yule model [Yule, 19..] which assumes that speciation
