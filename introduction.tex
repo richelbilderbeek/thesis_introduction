@@ -10,7 +10,7 @@ First Universal Common Ancestor (FUCA).
 We do not know when it lived.
 
 \begin{figure}[H]
-  \includegraphics[width=0.3\textwidth]{t_0.png}
+  \includegraphics[width=0.2\textwidth]{t_0.png}
   % 
   %    ----- FUCA
   %
@@ -32,7 +32,7 @@ are sister species.
 We do not know what caused the speciation.
 
 \begin{figure}[H]
-  \includegraphics[width=0.4\textwidth]{t_1.png}
+  \includegraphics[width=0.2\textwidth]{t_1.png}
   %
   %     +---- A
   %  ---+
@@ -58,7 +58,7 @@ and C will give rise to all contemporary biodiversity. This ancestor of species 
 is called the Last Universal Common Ancestor and lived around [then].
 
 \begin{figure}[H]
-  \includegraphics[width=0.5\textwidth]{t_3.png}
+  \includegraphics[width=0.4\textwidth]{t_3.png}
   %
   %     +--------x   A
   %  ---+     
@@ -134,8 +134,7 @@ of such events ('is speciation rate constant through time?')
 The mechanism of a speciation event has many facets.
 For more than half a century ago, it was hypothesized
 that speciation is caused by geographical isolation (e.g. Mayr, 1942)
-or due to ecological factors (e.g. Lack, 1947). [other proximate 
-causes of speciation]
+or due to ecological factors (e.g. Lack, 1947).
 
 % [picture of geographical isolation] | [picture of ecological factors]
 % [from Mayr's paper]                 | [the Darwin finches of course!]
@@ -154,13 +153,24 @@ asking question such as 'How often do speciation and extinction events take plac
 There are two methods to research speciation patterns back in evolutionary time:
 the use of fossils or using molecular phylogenies.
 
-% [picture of El Graeco fossil] | [](800px-Hominini_lineage.svg.png), from https://en.wikipedia.org/wiki/File:Hominini_lineage.svg
-%                               | 
-%  El Greaco                    | HS     Pan
-%                               |  \    /
-%                               |   \  /
-%                               |    \/
-%                               |     \
+\begin{figure}[H]
+  %
+  % [picture of El Graeco fossil] | [](800px-Hominini_lineage.svg.png), from https://en.wikipedia.org/wiki/File:Hominini_lineage.svg
+  %                               | 
+  %  El Greaco                    | HS     Pan
+  %                               |  \    /
+  %                               |   \  /
+  %                               |    \/
+  %                               |     \
+  %
+  \includegraphics[width=0.3\textwidth]{Graecopithecus.jpg}
+  \includegraphics[width=0.5\textwidth]{Hominini_lineage.png}
+  \caption{
+    Left: El Graeco fossil, from \cite{fuss2017potential}.
+    Right: Evolution of the Homininae, based on \cite{stringer2012makes}
+ }
+  \label{fig:human_evolution}
+\end{figure}
 
 Using fossils is a classic way to look back in evolutionary time.
 Fossils show a glimpse of the biodiversity in the past.
@@ -178,6 +188,8 @@ homonins are the tribe (taxanomic group) we Homo sapiens share with the Panini.
 % An adaptive radiation.                    | The number of species through time.
 %                                           | [use Etienne, DDD]
 
+
+
 Using molecular phylogenies is the modern way to look back in evolutionary time.
 It is the use of heritable molecules (e.g. DNA, RNA, or protein)  
 of contemporary species to infer phylogenies. 
@@ -190,14 +202,6 @@ others, species classification,
 forensics, conservation ecology
 and epidemiology \cite{lam2010use}.
 
-% ![](edge_tree.png)                          | ![](Pristis-pristis_Simon-Fraser-University-1000x667.jpg),
-%                                             | from http://www.edgeofexistence.org/species/largetooth-sawfish/
-% The ED (evolutionary distinctiveness)       | 
-% of species A is higher than that of species | The Largetooth Sawfish (Pristis pristis) is at number 1 of
-% B or C, as more                             | the EDGE list, with an EDGE Score of 7.38, 
-% evolutionary history will be lost when      | with an ED Score of 99.298. Score is calculated by
-% that species goes extinct.                  | ![](edge_score.svg)
-
 One example of the importance of an accurate phylogenetic tree 
 is demonstrated in \cite{bush1999positive}. This study
 investigated which loci of the H3 hemagglutinin surface protein
@@ -209,16 +213,34 @@ statistical threshold depending on the phylogeny.
 This study contributed to the selection of recommended 
 composition of influenza virus vaccines.
 
-
 \begin{figure}[H]
-  \includegraphics[width=0.5\textwidth]{bush_et_al_1999}
+  \includegraphics[width=0.3\textwidth]{bush_et_al_1999}
   %
   % A nice tree 
   %
   \caption{
-    MP tree
+    Phylogeny of the human influenza virus type A subtype H3,
+    from \cite{bush1999positive}
   }
   \label{fig:bush_et_al_1999}
+\end{figure}
+
+\begin{figure}[H]
+  \includegraphics[width=0.3\textwidth]{edge_tree.png}
+  \includegraphics[width=0.5\textwidth]{Pristis-pristis_Simon-Fraser-University-1000x667.jpg}
+  \caption{
+    Left: The ED (evolutionary distinctiveness)       
+    of species A is higher than that of species 
+    B or C, as more                             
+    evolutionary history will be lost when      
+    that species goes extinct.                  
+    Tree by Aglondon, from \url{https://commons.wikimedia.org/wiki/File:Edge_tree.png}.
+    Right: The Largetooth Sawfish (Pristis pristis) is at number 1 of the 
+    EDGE (ED = 'Evolutionary Distinctiveness', GE = Globally Endangered status) 
+    list, with an EDGE Score of 7.38 and an ED of 99.298.
+    Picture from \url{from http://www.edgeofexistence.org/species/largetooth-sawfish}
+ }
+  \label{fig:edge_species}
 \end{figure}
 
 Another example of the importance of an accurate phylogenetic tree 
@@ -233,19 +255,13 @@ The ED embodies the amount of evolutionary history lost when a species
 would go extinct, which can be calculated from a (hopefully accurate) 
 phylogeny.
 
-%
-% edge_score.svg                     | edge_tree.png
-%                                    |
-% The EDGE score of a species.       | Example tree. 
-% ED = Evolutionary Distinctiveness. |
-% GE = Globally Endangered status.   | 
-%                                    | Tree by Aglondon, 
-%                                    | from https://commons.wikimedia.org/wiki/File:Edge_tree.png
-%
-
-% ![](phylip.gif) |
-%                 |
-% PHYLIP logo     |
+\begin{figure}[H]
+  \includegraphics[width=0.2\textwidth]{phylip.png}
+  \caption{
+    PHYLIP logo
+ }
+  \label{fig:phylip}
+\end{figure}
 
 Phylogenetics has taken a huge flight, due to the massively increased
 computational power and techniques. A first milestone in this file is 
@@ -255,21 +271,29 @@ Another milestone is the Metropolis-Hasting algorithm, which
 allowed Bayesian phylogenetics to thrive, resulting in
 contemporay tools such as BEAST, BEAST2, MrBayes and RevBayes.
 
-%
-% [picture of BEAST2]
-%
+\begin{figure}[H]
+  \includegraphics[width=0.3\textwidth]{beast_logo.png}
+  \includegraphics[width=0.3\textwidth]{DensiTreeExample2.jpg}
+  \caption{
+    BEAST2 logo (left) and example output (right)
+ }
+  \label{fig:beast2}
+\end{figure}
 
 A clear example of the power of modern phylogenetics,
 is the Tree Of Life: it uses 
 3,083 genomes of 2,596 amino-acid positions 
 to create one big phylogeny of all (sequenced) life on Earth,
-which took 3,840 computational hours on a modern supercomputer [Hug et al., 2016].
+which took 3,840 computational hours on a modern supercomputer \cite{hug2016new}.
 
-%
-% [Tree Of Life]
-%
-% The Tree Of Life [Hug et al., 2016]
-%
+
+\begin{figure}[H]
+  \includegraphics[width=0.5\textwidth]{tree_of_life_2016.jpg}
+  \caption{
+    Tree of Life, from \cite{hug2016new}
+ }
+  \label{fig:tree_of_life}
+\end{figure}
 
 To create such a tree from protein sequences, one has to specify
 an evolutionary model. This evolutionary model embodies our set of
@@ -279,9 +303,8 @@ the rate(s) at which this happens (the clock model)
 and the rate(s) at which a branching/speciation event takes 
 place (the tree model). 
 For example, the amino acids of the Tree Of Life are assumed to change/mutate
-according to the LG [Si Quang 
-Le and Olivier Gascuel, An Improved General Amino Acid Replacement Matrix]
-model, which is a model that uses the average transition rates found in nature.
+according to the LG model \cite{le2008improved}, 
+which is a model that uses the average transition rates found in nature.
 
 There are many evolutionary models to choose from, 
 and selecting which one to use is hard, due to the many sets of assumptions
@@ -301,13 +324,15 @@ Because model comparison is hard, there have been multiple
 studies that investigate the effect of picking the wrong
 evolutionary models. 
 
-%
-%
-% revell2005under.gif
-%
-% Figure from \cite{revell2005under}. At the left was the true tree.
-% In the middle the inferred tree, that used the generative model
-% At the left the inferred tree when using a too simple inference model 
+\begin{figure}[H]
+  \includegraphics[width=0.5\textwidth]{revell2005under.png}
+  \caption{
+    Figure from \cite{revell2005under}. At the left was the true tree.
+    In the middle the inferred tree, that used the generative model
+    At the left the inferred tree when using a too simple inference model 
+ }
+  \label{fig:revell2005under}
+\end{figure}
 
 One example that demonstrates the effect of using a too simple inference model
 comes from Revell at al \cite{revell2005under}.
@@ -326,6 +351,7 @@ to an overly simplistic DNA model, instead of an interesting biological process.
 
 %
 % [part of LG transition rate matrix]
+% lg_transition_matrix.txt
 %
 % Part of an LG transition rate matrix
 
@@ -338,10 +364,15 @@ Using a wrong clock model has a profound impact
 on the inferred phylogenetic trees, unless we can
 specify the timing of some early speciation events \cite{duchene2014impact}.
 
-%
-% Figure from duchene2014impact
-%
-
+\begin{figure}[H]
+  \includegraphics[width=0.3\textwidth]{duchene_et_al_2014_fig_1.png}
+  \caption{
+    Phylogeny with speciation events labelled A to D,
+    where B is the earliest speciation event.
+    Figure from \cite{duchene2014impact}.
+ }
+  \label{fig:duchene2014impact}
+\end{figure}
 
 The tree model is the most important piece of an evolutionary model,
 with regard to speciation. The assumptions of a tree model is 
@@ -400,12 +431,17 @@ always hold, see figure [below]
 % An LTT plot for bird/lizards from [Etienne and Haegeman, 2012]
 %
 
-%
-% sarver2019choice.jpg
-%
-% Figure 3: Birth-death simulations.
-%
-% The top row of plots (A–D) refers to the 100-taxa cases, whereas the bottom row (E–H) refers to the 25-taxa cases. The median estimates of λ or r, estimated from the 10 original trees, are used as data for each boxplot. The title of each subplot refers to the simulation conditions. Each combination of tree priors and molecular clocks under which trees are estimated is listed on the x-axis. The distribution of estimates from the original trees is also displayed. Parameter estimates are highly congruent with the original trees under each set of simulation conditions.
+\begin{figure}[H]
+  \includegraphics[width=0.2\textwidth]{sarver2019choice_top_4_bars.png}
+  \caption{
+    Estimation of the speciation rate (lambda)
+    on inferred trees using 4 evolutionary models.
+    The original trees had 100 taxa and were simulated with a strict clock model 
+    and BD tree model, with a speciation rate of 1.104.
+    Adapted from \cite{sarver2019choice}.
+ }
+  \label{fig:sarver2019choice}
+\end{figure}
 
 A recent study that investigates the effect of picking
 a wrong standard tree prior, comes from Sarver et al, 2019 \cite{sarver2019choice}.
@@ -424,48 +460,49 @@ I will described the two new biological tree models that have been
 investigated, as well as the re-usable framework to do so. 
 
 The first novel and non-standard tree model is the protracted birth-death
-model (PBD) [Etienne and Rosindell, 201?].
+model (PBD) \cite{etienne2012prolonging}.
 Where the standard BD models assume that a speciation event creates
 two new species instantly, the PBD model assumes that one of these two species
 is an incipient species. An incipient species is a new species
 that is not yet recognized as such, although complete reproductive
 isolation is already present.
-A biological example is from [Fennesy, 201?] in which
+A biological example is from \cite{fennessy2013mitochondrial} in which
 some new giraffe species have been discovered by sequencing
 part of their DNA. Although these new species have been
 'discovered' recently, the had been no gene flow between species
 for already two million years.
-
-%
-% [phylogeny from Fennesy]
-%
-% Phylogeny from Fennesy
-%
 
 Using the BD model in species that are slow to speciate, will cause
 an underestimation of the number of lineages in the present (as in the
 giraffes), in effect possibly giving the illusion that speciation 
 slows down, where in reality it does not. 
 
-%
-% n_lineages
-%
-%   |      _______________
-%   |   __/
-%   | _/
-%   |/
-%   +---------------------
-%
-%       time
-%
-% An LTT plot from molecular phylogeny used by [Etienne and Rosindell]
-%
+\begin{figure}[H]
 
-%
-% [PBD phylogeny from Etienne and Rosindell]
-%
-% PBD phylogeny from Etienne and Rosindell
-%
+  %
+  % n_lineages
+  %
+  %   |      _______________
+  %   |   __/
+  %   | _/
+  %   |/
+  %   +---------------------
+  %
+  %       time
+  %
+  \includegraphics[width=0.3\textwidth]{eteinne_rosindell_2011_ltt.png}
+  \includegraphics[width=0.5\textwidth]{eteinne_rosindell_2011.png}
+  \caption{
+    Left: example lineage-through-time plots, for different 
+    speciation completion rates: yellow = 0.01, red = 0.1, green = 1.0, blue = 10.
+    Note the slowdown in the accumulation of new lineages when speciation completion
+    rate is lowered.
+    Right: number of species through time plots for four bird phylogenies, 
+    (after \cite{phillimore2008density})
+    Both figures are adapted from \cite{etienne2012prolonging}
+ }
+  \label{fig:etienne2012prolonging}
+\end{figure}
 
 The second novel and non-standard tree model is the multiple-birth 
 death (MBD) model [Laudanno et al., 2020].
@@ -495,10 +532,14 @@ It does so, by using the same experimental setup, called 'pirouette',
 which is described in chapter 3. This framework is built up a foundation
 of R packages called 'babette', which is described in chapter 2.
 
-%
-% Pretty nature picture
-%
-% Environment that follows an unknown speciation model
+\begin{figure}[H]
+  \includegraphics[width=0.3\textwidth]{The_Earth_seen_from_Apollo_17.jpg}
+  \caption{
+    Environment that follows an unknown speciation model.
+    From \url{https://commons.wikimedia.org/wiki/File:The_Earth_seen_from_Apollo_17.jpg}
+ }
+  \label{fig:unknown_speciation_model}
+\end{figure}
 
 In the end, we want to know how well we can infer a phylogeny from
 molecular data found in the field. That field, outside, 
