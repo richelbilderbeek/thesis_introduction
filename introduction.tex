@@ -9,14 +9,21 @@ Once upon a time, there was the first living organism, the
 First Universal Common Ancestor (FUCA).
 We do not know when it lived.
 
-% 
-%    ----- FUCA
-%
-% ---+---- (time)
-%    t0
-%
-% Evolutionary history of the First Universal Common Ancestor (FUCA).
-% Time goes from past (left) towards the present (right).
+\begin{figure}[H]
+  \includegraphics[width=0.3\textwidth]{t_0.png}
+  % 
+  %    ----- FUCA
+  %
+  % ---+---- (time)
+  %    t0
+  %
+  \caption{
+    Evolutionary history of the First Universal Common Ancestor (FUCA).
+    Time goes from past (left) towards the present (right).
+    \richel{TODO: Use proper phylogeny with proper timescale}
+  }
+  \label{fig:t_0}
+\end{figure}
 
 One unknown day, FUCA speciated, resulting in two species.
 This event doubled the biodiversity on Earth.
@@ -24,16 +31,24 @@ The two species, which we will call species A and B
 are sister species.
 We do not know what caused the speciation.
 
-%     +---- A
-%  ---+
-%     +---- B
-%
-% -+--+--- (time)
-%  t0 t1
-%
-% Evolutionary history of the First Universal Common Ancestor (FUCA).
-% and its two decendants.
-% Time goes from past (left) towards the present (right).
+\begin{figure}[H]
+  \includegraphics[width=0.4\textwidth]{t_1.png}
+  %
+  %     +---- A
+  %  ---+
+  %     +---- B
+  %
+  % -+--+--- (time)
+  %  t0 t1
+  %
+  \caption{
+    Evolutionary history of the First Universal Common Ancestor (FUCA).
+    and its two decendants.
+    Time goes from past (left) towards the present (right).
+    \richel{TODO: Use proper phylogeny with proper timescale}
+  }
+  \label{fig:t_1}
+\end{figure}
 
 Both species A had their unknown histories: they speciated themselves,
 and they and/or their descendants went extinct. 
@@ -42,46 +57,62 @@ exctint and that species B created a sister species C. Species B
 and C will give rise to all contemporary biodiversity. This ancestor of species B and C 
 is called the Last Universal Common Ancestor and lived around [then].
 
-            
-%     +--------x   A
-%  ---+     
-%     |     +------- B
-%     +-----+
-%           +------- C
-%
-% -+--+-----+--+---- (time)
-%  t0 t1    t2 t3
-%
-% Evolutionary history of the First Universal Common Ancestor (FUCA).
-% and its three decendants of which one went extinct.
-% Time goes from past (left) towards the present (right).
-% Assuming B and C will give rise to all contemporary biodiversity,
-% the Last Universal Common Ancestor (LUCA) must have come into existence
-% at timepoint t1.
-
-
+\begin{figure}[H]
+  \includegraphics[width=0.5\textwidth]{t_3.png}
+  %
+  %     +--------x   A
+  %  ---+     
+  %     |     +------- B
+  %     +-----+
+  %           +------- C
+  %
+  % -+--+-----+--+---- (time)
+  %  t0 t1    t2 t3
+  %
+  \caption{
+    Evolutionary history of the First Universal Common Ancestor (FUCA).
+    and its three decendants of which one went extinct.
+    Time goes from past (left) towards the present (right).
+    Assuming B and C will give rise to all contemporary biodiversity,
+    the Last Universal Common Ancestor (LUCA) must have come into existence
+    at timepoint t1.
+    \richel{TODO: Use proper phylogeny with proper timescale}
+  }
+  \label{fig:t_3}
+\end{figure}
 
 The biodiversity derived from LUCA is important to us 
 humans (apart from that is has created us) for many reasons.
 Biodiversity is found so important, that, for example, 
 the European Union has an explicit Biodiversity Strategy,
-which aims to halt the loss of biodiversity and ecosystem services [https://ec.europa.eu/environment/nature/biodiversity/strategy/index_en.htm].
+which aims to halt the loss of biodiversity and ecosystem 
+services (\url{https://ec.europa.eu/environment/nature/biodiversity/strategy/index_en.htm}).
 Ecosystem services are features of biological systems that are 
 positive for human well-being, for example food,
 carbon sequestration, waste decomposition and pest control.
-A review paper (Cardinale et al.) shows that 
+A review paper \cite{cardinale2012biodiversity} shows that 
 biodiversity unsually improves ecosystem services.
 
-%
-% Ecosystem function
-%
-%   |  _______
-%   | /
-%   |/
-%   +--------------
-%
-%     Biological diversity
-%
+\begin{figure}[H]
+  \includegraphics[width=0.5\textwidth]{cardinale_et_al_fig_1.png}
+  %
+  % Ecosystem function
+  %
+  %   |  _______
+  %   | /
+  %   |/
+  %   +--------------
+  %
+  %     Biological diversity
+  \caption{
+    A diversity-function relationship found to be typical from hundreds
+    of studies. The red line represents an average, where the grey polygon
+    represents a 95\% confidence interval. The red dots show the lower
+    and upper limit for monocultures. From \cite{cardinale2012biodiversity}
+  }
+  \label{fig:cardinale_et_al}
+\end{figure}
+
 
 Speciation is the process that increases biological diversity.
 This process is studied from multiple angles, among others,
@@ -178,9 +209,17 @@ statistical threshold depending on the phylogeny.
 This study contributed to the selection of recommended 
 composition of influenza virus vaccines.
 
-%
-% [bush_et_al_1999] MP tree 
-%
+
+\begin{figure}[H]
+  \includegraphics[width=0.5\textwidth]{bush_et_al_1999}
+  %
+  % A nice tree 
+  %
+  \caption{
+    MP tree
+  }
+  \label{fig:bush_et_al_1999}
+\end{figure}
 
 Another example of the importance of an accurate phylogenetic tree 
 comes from conservation biology, in which phylogenies are used to
