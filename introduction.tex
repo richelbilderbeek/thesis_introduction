@@ -109,28 +109,10 @@ we can study the mechanism ('what
 causes a speciation event?') or we can study the patterns of many
 of such events ('is speciation rate constant through time?')
 
-%
-% [picture of speciation machanism] | [picture of a trait that increases speciation rate]
-%                                   | 
-% Speciation mechanism:             | Speciation events though time:                           
-% what caused this speciation       | what are the patterns of
-% event to occur?                   | speciation events?
-% In this case, a geographics       | In this case, a trait that was a key innovation
-% barrier caused the initial        | gave rise to a higher speciation rate
-% species to diverge                | 
-%
-
 The mechanism of a speciation event has many facets.
 For more than half a century ago, it was hypothesized
 that speciation is caused by geographical isolation (e.g. Mayr, 1942)
 or due to ecological factors (e.g. Lack, 1947).
-
-% [picture of geographical isolation] | [picture of ecological factors]
-% [from Mayr's paper]                 | [the Darwin finches of course!]
-%                                     |
-% Speciation can happen due to        | Speciation can happen due to
-% a geographic barrier                | ecological factors
-%
 
 Instead of looking at the mechanism behind each speciation event,
 we can also look at patterns of speciation events through evolutionary time,
@@ -171,13 +153,6 @@ these fossils, only a fraction is discovered.
 One example of a famous fossil is 'El Graeco', 
 which may be the oldest known hominin \cite{fuss2017potential}, where
 homonins are the tribe (taxanomic group) we Homo sapiens share with the Panini.
-
-% [picture of adaptive radiation phylogeny] | [picture of DDD phylogeny]
-%                                           |
-% An adaptive radiation.                    | The number of species through time.
-%                                           | [use Etienne, DDD]
-
-
 
 Using molecular phylogenies is the modern way to look back in evolutionary time.
 It is the use of heritable molecules (e.g. DNA, RNA, or protein)  
@@ -336,12 +311,6 @@ also when the original trees were simulated with a constant speciation rate.
 This study shows that a decreasing speciation rate may be attributed
 to an overly simplistic DNA model, instead of an interesting biological process.
 
-%
-% [part of LG transition rate matrix]
-% lg_transition_matrix.txt
-%
-% Part of an LG transition rate matrix
-
 A more recent example that demonstrates the effect of using a too simple 
 inference model is about assuming a wrong clock model. 
 A clock model embodies our assumptions regarding the mutation rates in
@@ -378,11 +347,16 @@ is constant and there is no extinction.
 The Yule model predict that the number of extant species
 grows exponentially through time.
 
-%
-% [example Yule tree]  | [LTT plot for Yule model]
-%                      |
-% An example Yule tree | A lineages-through-time plot of the Yule model.
-%                      | 
+\begin{figure}[H]
+  \includegraphics[width=0.5\textwidth]{yule_tree.png}
+  \includegraphics[width=0.5\textwidth]{yule_tree_nltt.png}
+  \caption{
+    Left: An example Yule tree
+    Right: A lineages-through-time plot of the example Yule tree.
+    In all cases, time goes from past (left) towards the present (right).
+  }
+  \label{fig:yule}
+\end{figure}
 
 The Birth-Death model [Nee et al., 1994] is an extension of the
 Yule that allows for a constant extinction rate. 
@@ -392,11 +366,16 @@ grows exponentially through time. If the extinction rate exceeds
 the speciation rate, the number of lineages is expected to decline
 exponentially. The latter is biologically irrelevant.
 
-%
-% [example BD tree]  | [LTT plot for BD model]
-%                    |
-% An example BD tree | A lineages-through-time plot of the BD model.
-%                    | 
+\begin{figure}[H]
+  \includegraphics[width=0.5\textwidth]{bd_tree.png}
+  \includegraphics[width=0.5\textwidth]{bd_tree_nltt.png}
+  \caption{
+    Left: An example Birth-Death tree
+    Right: A lineages-through-time plot of the example Birth-Death tree.
+    In all cases, time goes from past (left) towards the present (right).
+  }
+  \label{fig:bd}
+\end{figure}
 
 It is clear that an exponential growth in the expected number of lineages
 is biologically nonsense. 
@@ -404,19 +383,27 @@ To state the obvious: a finite area (Earth) results in a finite number of specie
 Applying the BD model to molecular data already shows that it does not
 always hold, see figure [below]
 
-%
-% n_lineages
-%
-%   |      _______________
-%   |   __/
-%   | _/
-%   |/
-%   +---------------------
-%
-%       time
-%
-% An LTT plot for bird/lizards from [Etienne and Haegeman, 2012]
-%
+\begin{figure}[H]
+  \includegraphics[width=0.5\textwidth]{etienne_et_al_2012_dd.png}
+  %
+  % n_lineages
+  %
+  %   |      _______________
+  %   |   __/
+  %   | _/
+  %   |/
+  %   +---------------------
+  %
+  %       time
+  %
+  \caption{
+    An LTT plot for bird/lizards that shows a slowdown in speciation
+    rate, adapted from \cite{etienne2012diversity}. Because the number
+    of lineages on the y-axis are plotted on a logarithmic scale,
+    exponential growth would show as a straight line. 
+  }
+  \label{fig:bd}
+\end{figure}
 
 \begin{figure}[H]
   \includegraphics[width=0.2\textwidth]{sarver2019choice_top_4_bars.png}
@@ -514,7 +501,83 @@ triggering co-occurring speciation events each change.
 
 This thesis investigates the effect of picking a wrong standard
 tree prior, when the tree is generated 
-by the non-standard PBD (chapter 5) or MBD (chapter 4) tree model.
+by a non-standard tree model, using the phylogenetic software 
+called BEAST2 \cite{beast2},
+an abbreviation of 'Bayesian Evolutionary Analysis by Sampling Trees'.
+
+%
+% screenshot of BEAUti
+%
+%
+
+We chose to use BEAST2 \cite{beast2} over other phylogenetic software,
+because BEAST2 is popular, beginner-friendly, flexible, has a package manager
+and a modular well-designed software architecture. The beginner-friendliness
+comes from the BEAST2 program called BEAUti, in which the user can set up
+his/her evolutionary model from a graphical user interface. There are many (in
+the order of dozens to hundreds) options to set up an evolutionary inference model. 
+These choices are categorized in a site model, clock model and a tree prior. 
+
+%
+% Transition matrix of JC69 | GTR
+%
+%
+
+A site model embodies the way the -in our case of DNA- nucleotides
+change over time. One can specify the proportion of nucleotides
+that changes, or let it be estimated. And how dissimilar different transition
+rates may be between different nucleotides. Most essential is the nucleotide
+substitution model, which entails the relation between the twelve transition 
+rates from any of the four nucleotides to any of the other three nucleotides. 
+The simplest model (called
+JC69) assumes all are equal, where the most complex model (called GTR) assumes
+that all may differ. BEAST2 has four site models, yet there is a package that
+contains 18 more standard models.
+
+To give an idea about the scale of BEAST2, I will zoom in on
+the proportion invariants, which can be set to a certain value, or
+be estimated. If the value is set to a certain value, BEAST2 assumes
+this as the truth. If the value is to be estimated by BEAST2, then
+one must additionally specify an initial value and 
+a distribution how likely the different values are. 
+By default, BEAST2 assumes a uniform distribution from 0 to 1, in
+which all values are equally likely, but there are ten other distributions
+that can be picked as well. So, for one simple value, there is already
+a plethora of options (and there more I will not discuss!). 
+Within BEAST2, this liberty is the rule, instead of the
+exception, rendering it very flexible.
+
+The clock model embodies how the mutation rates vary between
+different species. The simplest clock model, called the strict clock,
+assumes that mutation rates are identical in all species. 
+Two, called relaxed-clock, models assume that mutation rates
+between branches are indepent, yet all rates are from one same distribution.
+The last standard clock model assumes that all species have a same mutation
+rate at the same time, yet these mutation rates may vary through time.
+
+The tree prior specifies how a tree is built up, or, in our context,
+how speciation takes place in time, at the macro-evolutionary level.
+In our context, these are the Yule and Birth-Death model, which I already
+described earlier.
+
+This thesis investigates the effect of picking a wrong standard
+tree prior, when the tree is generated 
+by a non-standard tree model, using practices from Open Science.
+
+Open Science has many facets. 
+
+ * Open eductional resources
+ * Open access
+ * Open data
+ * Open methodology
+ * Open tools
+
+ * Reproducible research: no HARKing
+
+
+This thesis investigates the effect of picking a wrong standard
+tree prior, when the tree is generated 
+by a non-standard tree model. 
 It does so, by using the same experimental setup, called 'pirouette',
 which is described in chapter 3. This framework is built up a foundation
 of R packages called 'babette', which is described in chapter 2.
@@ -531,4 +594,23 @@ In the end, we want to know how well we can infer a phylogeny from
 molecular data found in the field. That field, outside, 
 which follows an unknown speciation model. Let us just hope our inference
 is robust to whatever novel model we throw at it.
+
+
+
+
+
+Ik heb even naar de intro en synthese gekeken zoals je me die op 10-2 toestuurde. 
+Met de punten die we gisteren bespraken (o.a. meer detail over de ingredienten 
+van BEAST2), denk ik dat het een aardige inleiding wordt. Zou je in je inleiding 
+ook kunnen ingaan op je methode van werken? 
+Zowel Open Science en preregistration en het (samen)werken via GitHub? 
+
+Het zou ook goed zijn als je aangeeft wat precies de hordes zijn die je over 
+moet bij het maken van packages als babette en pirouette. 
+Ik sprak laatst iemand die dacht dat je een theoretische studie heel snel kan doen, 
+alleen maar even de computer zijn gang laten gaan. 
+Het is goed voor de lezer (zowel je vrienden/familie als de leescommissie) 
+om inzicht te krijgen in het proces van "even de computer zijn gang laten gaan". 
+Een soort "making of" dus. Als het beter past in een box of in de synthese, 
+dan mag dat wat mij betreft ook.
 
