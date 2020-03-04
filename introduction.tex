@@ -8,7 +8,7 @@
 Once upon a time, there was the first living organism, the 
 First Universal Common Ancestor (FUCA).
 We do not know when it lived. We can depict the evolutionary
-history of FUCA as seen in the left panel of figure \ref{fig:fuca}.
+history of FUCA as seen in figure \ref{fig:t_0}.
 
 \begin{figure}[H]
   \includegraphics[width=0.3\textwidth]{t_0.png}
@@ -18,6 +18,22 @@ history of FUCA as seen in the left panel of figure \ref{fig:fuca}.
   % ---+---- (time)
   %    t0
   %
+  \caption{
+    Evolutionary history of the First Universal Common Ancestor (FUCA).
+    Time goes from past (left) towards the present (right).
+  }
+  \label{fig:t_0}
+\end{figure}
+
+One unknown day, FUCA speciated, resulting in two species.
+This event doubled the biodiversity on Earth.
+The two species, which we will call species A and B
+are sister species.
+We do not know what caused the speciation.
+We can depict the evolutionary
+history of FUCA as seen in figure \ref{fig:t_1}.
+
+\begin{figure}[H]
   \includegraphics[width=0.3\textwidth]{t_1.png}
   %
   %     +---- A
@@ -27,6 +43,24 @@ history of FUCA as seen in the left panel of figure \ref{fig:fuca}.
   % -+--+--- (time)
   %  t0 t1
   %
+  \caption{
+    Evolutionary history of the two decendants of FUCA.
+    Time goes from past (left) towards the present (right).
+  }
+  \label{fig:t_1}
+\end{figure}
+
+Both species A and B had their unknown histories: they speciated themselves,
+and they and/or their descendants went extinct. 
+Extinction is a common event. Let's assume A and/or its clade went
+exctint and that species B created a sister species C. Species B
+and C will give rise to all contemporary biodiversity. This ancestor of species B and C 
+is called the Last Universal Common Ancestor. We can depict the evolutionary
+history of FUCA as seen in the right panel of figure \ref{fig:t_3}.
+We can also add a scale: LUCA is estimated to have lived around 3-5 
+billions of years ago (e.g. \cite{bell2015}).
+
+\begin{figure}[H]
   \includegraphics[width=0.3\textwidth]{t_3.png}
   %
   %     +--------x   A
@@ -39,43 +73,22 @@ history of FUCA as seen in the left panel of figure \ref{fig:fuca}.
   %  t0 t1    t2 t3
   %
   \caption{
-    Left: Evolutionary history of the First Universal Common Ancestor (FUCA).
-    Middle: Evolutionary history of the two decendants of FUCA.
-    Right: Evolutionary history of the three decendants of FUCA, 
+    Evolutionary history of the three decendants of FUCA, 
     of which one went extinct.
     Assuming B and C will give rise to all contemporary biodiversity,
     the Last Universal Common Ancestor (LUCA) must have come into existence
     at timepoint t1.
-    In all cases, time goes from past (left) towards the present (right).
+    Time goes from past (left) towards the present (right).
   }
-  \label{fig:fuca}
+  \label{fig:t_3}
 \end{figure}
-
-One unknown day, FUCA speciated, resulting in two species.
-This event doubled the biodiversity on Earth.
-The two species, which we will call species A and B
-are sister species.
-We do not know what caused the speciation.
-We can depict the evolutionary
-history of FUCA as seen in the middle panel of figure \ref{fig:fuca}.
-
-Both species A had their unknown histories: they speciated themselves,
-and they and/or their descendants went extinct. 
-Extinction is a common event. Let's assume A and/or its clade went
-exctint and that species B created a sister species C. Species B
-and C will give rise to all contemporary biodiversity. This ancestor of species B and C 
-is called the Last Universal Common Ancestor and lived around [then].
-We can depict the evolutionary
-history of FUCA as seen in the right panel of figure \ref{fig:fuca}.
-\richel{Make this story a bit more coherent}
 
 The biodiversity derived from LUCA is important to us 
 humans (apart from that is has created us) for many reasons.
 Biodiversity is found so important, that, for example, 
 the European Union has an explicit Biodiversity Strategy,
 which aims to halt the loss of biodiversity and ecosystem 
-services (\url{https://ec.europa.eu/environment/nature/biodiversity/strategy/index_en.htm}
-\richel{Move reference to references}).
+services (\url{https://ec.europa.eu/environment/nature/biodiversity/strategy/index_en.htm}).
 Ecosystem services are features of biological systems that are 
 positive for human well-being, for example food,
 carbon sequestration, waste decomposition and pest control.
@@ -102,12 +115,18 @@ biodiversity unsually improves ecosystem services.
   \label{fig:cardinale_et_al}
 \end{figure}
 
-
 Speciation is the process that increases biological diversity.
 This process is studied from multiple angles, among others,
 we can study the mechanism ('what
 causes a speciation event?') or we can study the patterns of many
-of such events ('is speciation rate constant through time?')
+of such events ('is speciation rate constant through time?').
+
+\begin{figure}[H]
+  \includegraphics[width=0.5\textwidth]{Darwin's_finches_by_Gould.jpg}
+  \caption{
+    Darwin's finches, by John Gould
+  }
+\end{figure}
 
 The mechanism of a speciation event has many facets.
 For more than half a century ago, it was hypothesized
@@ -287,7 +306,7 @@ studies that investigate the effect of picking the wrong
 evolutionary models. 
 
 \begin{figure}[H]
-  \includegraphics[width=0.5\textwidth]{revell2005under.png}
+  \includegraphics[width=0.7\textwidth]{revell2005under.png}
   \caption{
     Figure from \cite{revell2005under}. At the left was the true tree.
     In the middle the inferred tree, that used the generative model
@@ -348,8 +367,8 @@ The Yule model predict that the number of extant species
 grows exponentially through time.
 
 \begin{figure}[H]
-  \includegraphics[width=0.5\textwidth]{yule_tree.png}
-  \includegraphics[width=0.5\textwidth]{yule_tree_nltt.png}
+  \includegraphics[width=0.4\textwidth]{yule_tree.png}
+  \includegraphics[width=0.4\textwidth]{yule_tree_nltt.png}
   \caption{
     Left: An example Yule tree
     Right: A lineages-through-time plot of the example Yule tree.
@@ -367,8 +386,8 @@ the speciation rate, the number of lineages is expected to decline
 exponentially. The latter is biologically irrelevant.
 
 \begin{figure}[H]
-  \includegraphics[width=0.5\textwidth]{bd_tree.png}
-  \includegraphics[width=0.5\textwidth]{bd_tree_nltt.png}
+  \includegraphics[width=0.4\textwidth]{bd_tree.png}
+  \includegraphics[width=0.4\textwidth]{bd_tree_nltt.png}
   \caption{
     Left: An example Birth-Death tree
     Right: A lineages-through-time plot of the example Birth-Death tree.
@@ -384,7 +403,7 @@ Applying the BD model to molecular data already shows that it does not
 always hold, see figure [below]
 
 \begin{figure}[H]
-  \includegraphics[width=0.5\textwidth]{etienne_et_al_2012_dd.png}
+  \includegraphics[width=0.8\textwidth]{etienne_et_al_2012_dd.png}
   %
   % n_lineages
   %
@@ -559,21 +578,6 @@ The tree prior specifies how a tree is built up, or, in our context,
 how speciation takes place in time, at the macro-evolutionary level.
 In our context, these are the Yule and Birth-Death model, which I already
 described earlier.
-
-This thesis investigates the effect of picking a wrong standard
-tree prior, when the tree is generated 
-by a non-standard tree model, using practices from Open Science.
-
-Open Science has many facets. 
-
- * Open eductional resources
- * Open access
- * Open data
- * Open methodology
- * Open tools
-
- * Reproducible research: no HARKing
-
 
 This thesis investigates the effect of picking a wrong standard
 tree prior, when the tree is generated 
