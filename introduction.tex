@@ -133,8 +133,8 @@ of such events ('is speciation rate constant through time?').
 The mechanism of a speciation event has many facets.
 For more than half a century ago, it was hypothesized
 that speciation is caused by geographical 
-isolation (e.g. \cite{mayr1999systematics}, first edition of 1942)
-or due to ecological factors (e.g. Lack, 1947).
+isolation (e.g. \cite{mayr1942})
+or due to ecological factors (e.g. \cite{lack1947}).
 
 Instead of looking at the mechanism behind each speciation event,
 we can also look at patterns of speciation events through evolutionary time,
@@ -177,7 +177,7 @@ which may be the oldest known hominin \cite{fuss2017potential}, where
 homonins are the tribe (taxanomic group) we Homo sapiens share with the Panini.
 
 Using molecular phylogenies is the modern way to look back in evolutionary time.
-It is the use of heritable molecules (e.g. DNA, RNA, or protein)  
+It is the use of heritable molecules (for example DNA, RNA, or protein)  
 of contemporary species to infer phylogenies. 
 The field of phylogenetics is the research discipline that
 intends to infer the most accurate phylogenies possible, 
@@ -253,7 +253,8 @@ Felsensteyn's work in 1980, creating (and still maintaining) PHYLIP,
 the first software package for classical phylogenetic analysis.
 Another milestone is the Metropolis-Hasting algorithm, which 
 allowed Bayesian phylogenetics to thrive, resulting in
-contemporay tools such as BEAST, BEAST2, MrBayes and RevBayes.
+contemporay tools such as BEAST, BEAST2 (of which more below), 
+MrBayes and RevBayes.
 
 \begin{figure}[H]
   \includegraphics[width=0.2\textwidth]{beast_logo.png}
@@ -363,9 +364,8 @@ two events a speciation and an extinction event respectively.
 
 There are two standard tree models, called the Yule (also: pure-birth(
 and (standard) birth-death model. The most basic speciation model
-is the Yule model [Yule, 19..] which assumes that speciation
+is the Yule model \cite{yule1925mathematical} which assumes that speciation
 is constant and there is no extinction.
-[Research on fossils with Yule model would be fun].
 The Yule model predict that the number of extant species
 grows exponentially through time.
 
@@ -380,7 +380,7 @@ grows exponentially through time.
   \label{fig:yule}
 \end{figure}
 
-The Birth-Death model [Nee et al., 1994] is an extension of the
+The Birth-Death model \cite{nee1994} is an extension of the
 Yule that allows for a constant extinction rate. 
 If the speciation rate exceeds the extinction rate,
 also the BD model predicts that the number of extant species
@@ -403,7 +403,7 @@ It is clear that an exponential growth in the expected number of lineages
 is biologically nonsense. 
 To state the obvious: a finite area (Earth) results in a finite number of species. 
 Applying the BD model to molecular data already shows that it does not
-always hold, see figure [below]
+always hold, as shown by figure \ref{fig:bd}.
 
 \begin{figure}[H]
   \includegraphics[width=0.8\textwidth]{etienne_et_al_2012_dd.png}
