@@ -1,0 +1,14 @@
+Package: bilderintroduction
+Title: The Introduction Of Richel Bilderbeek's Thesis
+Version: 0.1
+Authors@R: 
+    person("Richèl J.C.", "Bilderbeek", email = "richel@richelbilderbeek.nl", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1107-7049"))
+Description: At the end of his/her contract, a PhD hands in a thesis.
+    The core of the thesis consists out of publishable academic papers.
+    Except for these, there are some peripheral chapters, such as an
+    introduction and a synthesis.
+    This 'package' contains the introduction chapter of Richel Bilderbeek's
+    thesis.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
