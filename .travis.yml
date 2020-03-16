@@ -14,4 +14,6 @@ r_github_packages:
 
 after_script:
   - Rscript -e 'spelling::spell_check_files("introduction.tex", ignore = readLines("inst/WORDLIST"))'
+  # Same, but gives an error if spellcheck fails
+  - [ "$(Rscript -e 'spelling::spell_check_files("introduction.tex", ignore = readLines("inst/WORDLIST"))')" == "No spelling errors found." ]
 
