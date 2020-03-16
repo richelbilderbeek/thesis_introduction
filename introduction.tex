@@ -338,8 +338,8 @@ which consists of a sequence of the four DNA nucleotides.
 In the simulation of the DNA sequences, the experimenters
 used different DNA substitution models.
 A DNA substitution model embodies the transition rates of these nucleotides (see
-figure {fig:dna_substitution} for an example).
-From the simulated DNA sequences, the researched inferred phylogenies again,
+figure \ref{fig:dna_substitution} for an example).
+From the simulated DNA sequences, the researchers inferred phylogenies again,
 with either the correct or a simpler DNA substitution model.
 Ideally, the inferred phylogenies match the phylogenies the alignments are based upon.
 They found that when the DNA model is the correct one, inference of the
@@ -349,8 +349,6 @@ the inferred tree shows a slowdown in their speciation rates,
 even when the original tree was simulated with a constant speciation rate.
 This study shows that a decreasing speciation rate may be attributed
 to an overly simplistic DNA model, instead of an interesting biological process.
-
-\rampal{This is a nice example but you introduce the words alignment and DNA sequences without further explanation.}
 
 \begin{figure}[H]
 
@@ -606,13 +604,13 @@ exception, rendering it very flexible.
 
 The clock model embodies how the mutation rates vary between
 different species. The simplest clock model, called the strict clock,
-assumes that mutation rates are identical in all species. 
+assumes that mutation rates are identical in all species at all times. 
 Two models (called relaxed-clock models) assume that mutation rates
-between branches are independent, yet all rates are from one probability distribution.
-The last standard clock model assumes that all species have the same mutation
-rate at the same time, yet these mutation rates may vary through time.
-
-\rampal{What is this last standard clock model called? And what is the difference between the two relaxed clock models?} 
+between species are independent (yet all rates are from one probability 
+distribution), but stay constant after each species' inception.
+The last standard clock model (called a random local clock) assumes 
+that all species have the same mutation
+rate at any time, yet the mutation rates varies through time.
 
 \begin{figure}[H]
   \includegraphics[width=0.8\textwidth]{beauti_clock_model.png}
