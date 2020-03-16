@@ -1,6 +1,6 @@
 Package: bilderintroduction
 Title: The Introduction Of Richel Bilderbeek's Thesis
-Version: 0.1
+Version: 0.2
 Authors@R: 
     person("Richèl J.C.", "Bilderbeek", email = "richel@richelbilderbeek.nl", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1107-7049"))
 Description: At the end of his/her contract, a PhD hands in a thesis.

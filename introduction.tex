@@ -250,14 +250,13 @@ phylogeny.
 
 Phylogenetics has taken a huge flight, due to the massively increased
 computational power and techniques. A first milestone in this file is 
-Felsenstein's work in 1980, creating (and still maintaining!) PHYLIP, 
+Felsenstein's work in 1980, creating (and still maintaining!) 
+PHYLIP (\cite{felsenstein1981evolutionary}), 
 the first software package for classical phylogenetic analysis.
 Another milestone is the Metropolis-Hasting algorithm, which 
 allowed Bayesian phylogenetics to thrive, resulting in
-contemporary tools such as BEAST, BEAST2 (of which more below), 
-MrBayes and RevBayes.
-
-\rampal{Provide references to Felsenstein's paper and to the software packages}
+contemporary tools such as BEAST (\cite{beast1}), BEAST2 (\cite{beast2}) (of which more below), 
+MrBayes (\cite{mrbayes}) and RevBayes (\cite{revbayes}).
 
 \begin{figure}[H]
   \includegraphics[width=0.2\textwidth]{phylip.png}
@@ -272,13 +271,14 @@ MrBayes and RevBayes.
 \end{figure}
 
 A clear example of the power of modern phylogenetics,
-is the Tree Of Life: it uses 
-3,083 genomes of 2,596 amino-acid positions 
-to create one big phylogeny of all (sequenced) life on Earth,
-which took 3,840 computational hours on a modern 
+is the Tree Of Life.
+The Tree Of Life is based on the proteome of 3,083 species.
+A proteome of a species consists of all the proteins found within that species.
+To be able to compare between different species, the researchers
+used part of the proteome that is common in most of these species,
+which consisted of 2,596 amino-acids.
+To create the Tree of Life, it took 3,840 computational hours on a modern 
 supercomputer (\cite{hug2016new}).
-
-\rampal{what do you mean by amino acid positions? Don't you mean protein sequences? Furthermore, you haven't explained what a protein sequence is. Given that you discuss things at a low level, I think this should be added.}
 
 \begin{figure}[H]
   \includegraphics[width=0.4\textwidth]{tree_of_life_2016.jpg}
@@ -295,11 +295,11 @@ such as the way a protein sequence evolves (also called the site model),
 the rate(s) at which this happens (the clock model) 
 and the way in which a branching/speciation event takes 
 place (the tree model). 
-For example, the amino acids of the Tree Of Life are assumed to change/mutate
-according to the LG model (\cite{le2008improved}), 
-which is a model that uses the average transition rates found in nature.
-
-\rampal{You introduce the word transition, but you haven't explained you mean by this.}
+For example, the amino acids of the Tree Of Life are assumed to change
+over time according to the LG model (\cite{le2008improved}).
+The speeds at which amino acids change to others are called the transition
+rates. The LG model is a model over amino acid transition rates, 
+which uses the average rates found in nature.
 
 There are many evolutionary models to choose from, 
 and selecting which one to use is hard, due to the many sets of assumptions
@@ -329,11 +329,18 @@ evolutionary models.
 \end{figure}
 
 One example that demonstrates the effect of using a too simple inference model
-esd provided by Revell and colleagues (\cite{revell2005under}).
-They simulated many phylogenies and corresponding DNA sequences 
-using different DNA substitution models. 
-After this, they inferred phylogenies from the simulated alignments
-with either the correct or a simpler DNA substitution model. 
+is provided by Revell and colleagues (\cite{revell2005under}).
+They first simulated many phylogenies.
+From those phylogenies, they simulated DNA sequences for each of
+the virtual species.
+DNA is the heritable material all life on Earth possesses,
+which consists of a sequence of the four DNA nucleotides.
+In the simulation of the DNA sequences, the experimenters
+used different DNA substitution models.
+A DNA substitution model embodies the transition rates of these nucleotides (see
+figure {fig:dna_substitution} for an example).
+From the simulated DNA sequences, the researched inferred phylogenies again,
+with either the correct or a simpler DNA substitution model.
 Ideally, the inferred phylogenies match the phylogenies the alignments are based upon.
 They found that when the DNA model is the correct one, inference of the
 phylogenies is not flawless but satisfactory.
@@ -343,7 +350,7 @@ even when the original tree was simulated with a constant speciation rate.
 This study shows that a decreasing speciation rate may be attributed
 to an overly simplistic DNA model, instead of an interesting biological process.
 
-\rampal{This is a nice example but you introduce the words substitution model, alignment and DNA sequences without further explanation.}
+\rampal{This is a nice example but you introduce the words alignment and DNA sequences without further explanation.}
 
 \begin{figure}[H]
 

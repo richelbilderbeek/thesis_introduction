@@ -3,6 +3,15 @@
 language: R
 cache: packages
 
-script:
-  - spelling::spell_check_files("synthesis.tex")
+r_packages:
+  - dplyr
+  - gh
+  - ggplot2
+  - xtable
+
+r_github_packages:
+  - ropensci/spelling
+
+after_script:
+  - Rscript -e 'spelling::spell_check_files("introduction.tex", ignore = readLines("inst/WORDLIST"))'
 
