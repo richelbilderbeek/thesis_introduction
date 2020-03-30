@@ -11,5 +11,4 @@ rm *.log
 rm *.out
 rm *.pdf
 rm *.rtf
-rm *.run.xml
-rm *.txt
+
